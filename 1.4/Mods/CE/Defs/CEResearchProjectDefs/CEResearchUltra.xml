@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ResearchProjectDef>
+        <defName>VCEPU_FSXRefiningTierIII</defName>
+        <label>FSX Refining Tier 3</label>
+        <description>Research how to refine chemfuel into FSX the fastest way.</description>
+        <baseCost>15000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEPU_FSXRefiningTierII</li>
+        </prerequisites>
+        <researchViewX>10.00</researchViewX>
+        <researchViewY>0.80</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef MayRequire="vanillaexpanded.helixiengas">
+        <defName>VCEPU_FSXRefiningGasTierIII</defName>
+        <label>Gas to FSX Refining Tier 3</label>
+        <description>Research how to refine gas into FSX the fastest way.</description>
+        <baseCost>15000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEPU_FSXRefiningGasTierII</li>
+        </prerequisites>
+        <researchViewX>10.00</researchViewX>
+        <researchViewY>0.80</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>VCEPU_PrometheumRefiningTierIII</defName>
+        <label>Prometheum Refining Tier 3</label>
+        <description>Research how to refine chemfuel into prometheum the fastest way.</description>
+        <baseCost>15000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEPU_PrometheumRefiningTierII</li>
+        </prerequisites>
+        <researchViewX>10.00</researchViewX>
+        <researchViewY>1.70</researchViewY>
+    </ResearchProjectDef>
+</Defs>

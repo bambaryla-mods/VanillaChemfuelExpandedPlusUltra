@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Toxic Wastepack Generator Plus</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="EW_WastepackNet" or defName="EW_UndergroundWastePipe" or defName="EW_WastePipe" or defName="EW_WasteValve" or defName="EW_WasteTank" or defName="EW_WasteTap" or defName="EW_WasteBin"]</xpath>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PipeSystem.ProcessDef[starts-with(defName, "VCEPU_") and not(contains(defName, "Tier"))]</xpath>
+    <value>
+      <wastePackToProduce>1</wastePackToProduce>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PipeSystem.ProcessDef[starts-with(defName, "VCEPU_") and contains(defName, "TierII") and not(contains(defName, "TierIII"))]</xpath>
+    <value>
+      <wastePackToProduce>2</wastePackToProduce>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PipeSystem.ProcessDef[starts-with(defName, "VCEPU_") and contains(defName, "TierIII")]</xpath>
+    <value>
+      <wastePackToProduce>5</wastePackToProduce> 
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[starts-with(defName, "VCEPU_") and contains(defName, "Refinery")]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]</xpath>
+    <value>
+      <stopWhenWastepackFull>True</stopWhenWastepackFull> 
+    </value>
+  </Operation>
+
+</Patch>
