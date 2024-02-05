@@ -31,10 +31,9 @@ namespace VCEPlusUltra
             base.CompTick();
             if (parent.IsHashIntervalTick(Props.tickRateInterval) && compPower.PowerOn is false && compStorage.AmountStored > 0)
             {
-                parent.HitPoints -= Props.damageAmount;
-                if (parent.HitPoints <= 0)
+                if (parent.HitPoints > Props.damageAmount)
                 {
-                    parent.Destroy();
+                    parent.TakeDamage(new DamageInfo(DamageDefOf.Blunt, Props.damageAmount));
                 }
             }
         }
