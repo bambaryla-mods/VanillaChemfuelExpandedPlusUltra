@@ -7,7 +7,7 @@ namespace VCEPlusUltra
 {
     public class CompProperties_CauseConditionWhenDestroyed : CompProperties
     {
-        public GameConditionDef condition;
+        public IncidentDef condition;
 
         public CompProperties_CauseConditionWhenDestroyed()
         {
@@ -30,16 +30,17 @@ namespace VCEPlusUltra
             base.PostDestroy(mode, previousMap);
             if (compStorage.AmountStoredPct > 0)
             {
-                var condition = previousMap.gameConditionManager.GetActiveCondition(Props.condition);
+                var condition = previousMap.gameConditionManager.GetActiveCondition(Props.condition.gameCondition);
                 if (condition != null)
                 {
                     condition.Duration += (int)(12500 * (compStorage.AmountStoredPct * 100));
                 }
                 else
                 {
-                    condition = GameConditionMaker.MakeCondition(Props.condition);
+                    var parms = StorytellerUtility.DefaultParmsNow(Props.condition.category, previousMap);
+                    Props.condition.Worker.TryExecute(parms);
+                    condition = previousMap.gameConditionManager.GetActiveCondition(Props.condition.gameCondition);
                     condition.Duration = (int)(25000 * (compStorage.AmountStoredPct * 100));
-                    previousMap.gameConditionManager.RegisterCondition(condition);
                 }
             }
         }

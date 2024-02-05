@@ -66,15 +66,10 @@
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bill_Production_ShouldDoNow_Patch.cs" />
     <Compile Include="CompCauseConditionWhenDestroyed.cs" />
     <Compile Include="CompDamageWhenUnpowered.cs" />
     <Compile Include="CompPollutionPump_Pump_Patch.cs" />
-    <Compile Include="CompQualityOffset.cs" />
     <Compile Include="CompWasteProducer_ProduceWaste_Patch.cs" />
-    <Compile Include="QualityUtility_GenerateQualityCreatedByPawn_Patch.cs" />
-    <Compile Include="RecipeDef_AvailableOnNow_Patch.cs" />
-    <Compile Include="RequiredLinkablesToCraft.cs" />
     <Compile Include="VCEPlusUltraMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
