@@ -51,4 +51,13 @@
     </nomatch>
   </Operation>
 
+  <Operation Class="PatchOperationInsert">
+    <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_WasteProducer" or @Class="CompProperties_PollutionPump"]</xpath>
+    <value>
+      <li Class="PipeSystem.CompProperties_Resource">
+        <pipeNet>VCEPU_ToxicWasteNet</pipeNet>
+      </li>
+    </value>
+  </Operation>
+
 </Patch>
