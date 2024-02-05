@@ -320,6 +320,18 @@
         <preExplosionSpawnChance>1</preExplosionSpawnChance>
         <wickTicks>70~150</wickTicks>
       </li>
+	  <li Class="VCEPlusUltra.CompProperties_DamageWhenUnpowered">
+		<tickRateInterval>60</tickRateInterval>
+		<damageAmount>5</damageAmount>
+	  </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>100</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+	  <li Class="VCEPlusUltra.CompProperties_CauseConditionWhenDestroyed">
+		<condition>ToxicFallout</condition>
+	  </li>
     </comps>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <designationCategory>VCHE_PipeNetworks</designationCategory>
