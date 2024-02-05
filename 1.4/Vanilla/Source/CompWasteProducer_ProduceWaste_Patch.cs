@@ -13,7 +13,7 @@ namespace VCEPlusUltra
             foreach (var compResource in __instance.parent.GetComps<CompResource>())
             {
                 var net = compResource.PipeNet;
-                if (net != null && net.def.linkToRefuelables.Any(x => x.thing == ThingDefOf.Wastepack) 
+                if (net?.def?.linkToRefuelables != null && net.def.linkToRefuelables.Any(x => x?.thing == ThingDefOf.Wastepack) 
                     && net.AvailableCapacity >= amountToMake)
                 {
                     net.DistributeAmongStorage(amountToMake, out _);

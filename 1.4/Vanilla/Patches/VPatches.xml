@@ -34,7 +34,7 @@
     <value>
       <li MayRequire="ludeon.rimworld.biotech" Class="CompProperties_ThingContainer">
         <compClass>CompThingContainer</compClass>
-        <stackLimit>1000</stackLimit>
+        <stackLimit>1</stackLimit>
         <drawContainedThing>false</drawContainedThing>
         <dropEffecterDef>MechChargerWasteRemoved</dropEffecterDef>
       </li>
