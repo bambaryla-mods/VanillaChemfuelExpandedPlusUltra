@@ -57,6 +57,9 @@
         </processes>
         <soundAmbient>VCHE_RefineryAmbient</soundAmbient>
       </li>
+      <li Class="PipeSystem.CompProperties_Resource">
+        <pipeNet>VCEPU_ToxicWasteNet</pipeNet>
+      </li>
     </value>
 
   </Operation>
