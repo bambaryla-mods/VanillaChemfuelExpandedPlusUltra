@@ -11,8 +11,7 @@ namespace VCEPlusUltra
     {
         public static bool Prefix(CompPollutionPump __instance)
         {
-            var compResource = __instance.parent.GetComp<CompResource>();
-            if (compResource != null)
+            foreach (var compResource in __instance.parent.GetComps<CompResource>())
             {
                 var net = compResource.PipeNet;
                 if (net != null && net.def.linkToRefuelables.Any(x => x.thing == ThingDefOf.Wastepack))
