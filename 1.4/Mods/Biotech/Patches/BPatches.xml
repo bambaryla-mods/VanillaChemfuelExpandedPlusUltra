@@ -31,15 +31,24 @@
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/PipeSystem.ProcessDef[starts-with(defName, "VCEPU_") and contains(defName, "TierIII")]</xpath>
     <value>
-      <wastePackToProduce>5</wastePackToProduce> 
+      <wastePackToProduce>5</wastePackToProduce>
     </value>
   </Operation>
 
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[starts-with(defName, "VCEPU_") and contains(defName, "Refinery")]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]</xpath>
-    <value>
-      <stopWhenWastepackFull>True</stopWhenWastepackFull> 
-    </value>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[starts-with(defName, "VCEPU_") and contains(defName, "Refinery")]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/stopWhenWastepackFull</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[starts-with(defName, "VCEPU_") and contains(defName, "Refinery")]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/stopWhenWastepackFull</xpath>
+      <value>
+        <stopWhenWastepackFull>True</stopWhenWastepackFull>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[starts-with(defName, "VCEPU_") and contains(defName, "Refinery")]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]</xpath>
+      <value>
+        <stopWhenWastepackFull>True</stopWhenWastepackFull>
+      </value>
+    </nomatch>
   </Operation>
 
 </Patch>
