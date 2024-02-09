@@ -30,7 +30,8 @@ namespace VCEPlusUltra
             base.PostDestroy(mode, previousMap);
             if (compStorage.AmountStoredPct > 0)
             {
-                var condition = previousMap.gameConditionManager.GetActiveCondition(Props.condition.gameCondition);
+                var conditionDef = GetGameCondition();
+                var condition = previousMap.gameConditionManager.GetActiveCondition(conditionDef);
                 if (condition != null)
                 {
                     condition.Duration += (int)(12500 * (compStorage.AmountStoredPct * 100));
@@ -39,10 +40,19 @@ namespace VCEPlusUltra
                 {
                     var parms = StorytellerUtility.DefaultParmsNow(Props.condition.category, previousMap);
                     Props.condition.Worker.TryExecute(parms);
-                    condition = previousMap.gameConditionManager.GetActiveCondition(Props.condition.gameCondition);
+                    condition = previousMap.gameConditionManager.GetActiveCondition(conditionDef);
                     condition.Duration = (int)(25000 * (compStorage.AmountStoredPct * 100));
                 }
             }
+        }
+
+        private GameConditionDef GetGameCondition()
+        {
+            if (Props.condition.Worker is IncidentWorker_Flashstorm)
+            {
+                return GameConditionDefOf.Flashstorm;
+            }
+            return Props.condition.gameCondition;
         }
     }
 }
