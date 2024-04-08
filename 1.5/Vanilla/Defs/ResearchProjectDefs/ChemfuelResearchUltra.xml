@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ResearchProjectDef>
+        <defName>VCEPU_ChemfuelRefiningTierIII</defName>
+        <label>Chemfuel Refining Tier 3</label>
+        <description>Research how to refine deepchem into chemfuel the fastest way possible.</description>
+        <baseCost>50000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEPU_ChemfuelRefiningTierII</li>
+        </prerequisites>
+        <researchViewX>10.00</researchViewX>
+        <researchViewY>2.15</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>VCEPU_NeutroamineRefiningTierIII</defName>
+        <label>Neutroamine Refining Tier 3</label>
+        <description>Research how to refine deepchem into neutroamine the fastest way possible.</description>
+        <baseCost>50000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEPU_NeutroamineRefiningTierII</li>
+        </prerequisites>
+        <researchViewX>10.00</researchViewX>
+        <researchViewY>2.55</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>VCEPU_DyeRefiningTierIII</defName>
+        <label>Dye Refining Tier 3</label>
+        <description>Research how to refine chemfuel into dye the fastest way possible.</description>
+        <baseCost>25000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEPU_DyeRefiningTierII</li>
+        </prerequisites>
+        <researchViewX>10.00</researchViewX>
+        <researchViewY>3.05</researchViewY>
+    </ResearchProjectDef>
+</Defs>
