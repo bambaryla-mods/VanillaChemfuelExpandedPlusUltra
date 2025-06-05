@@ -22,5 +22,10 @@ namespace VCEPlusUltra
             }
             return true;
         }
+
+        public static void Postfix(CompWasteProducer __instance)
+        {
+            __instance.parent.TryGetInnerInteractableThingOwner().TryDropAll(__instance.parent.Position, __instance.parent.Map, ThingPlaceMode.Near);
+        }
     }
 }
