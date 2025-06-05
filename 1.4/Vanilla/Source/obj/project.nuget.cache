@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "O9eOXRswHtlzoLFs2FJcuXfIgYykOxhdgD9CaswOrkEgjY6WzH326aL7bZx6z6eDGeIBNrJoM3Q1VB0d6QACQQ==",
+  "dgSpecHash": "F4vhay/NSbt5/4RD+fOClF1vgr64sEgbFxzbOAxEsrGaSKjdmV5udbNiyjFj5OIuUolTmLXWAIMFoqIfVmRpKQ==",
   "success": true,
-  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaChemfuelExpandedPlusUltra\\1.4\\Vanilla\\Source\\VCEPlusUltra.csproj",
+  "projectFilePath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaChemfuelExpandedPlusUltra\\1.4\\Vanilla\\Source\\VCEPlusUltra.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Holden\\.nuget\\packages\\krafs.publicizer\\2.2.1\\krafs.publicizer.2.2.1.nupkg.sha512",
-    "C:\\Users\\Holden\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4055-beta\\krafs.rimworld.ref.1.5.4055-beta.nupkg.sha512",
-    "C:\\Users\\Holden\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512"
+    "C:\\Users\\David\\.nuget\\packages\\krafs.publicizer\\2.3.0\\krafs.publicizer.2.3.0.nupkg.sha512",
+    "C:\\Users\\David\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4409\\krafs.rimworld.ref.1.5.4409.nupkg.sha512",
+    "C:\\Users\\David\\.nuget\\packages\\lib.harmony\\2.3.6\\lib.harmony.2.3.6.nupkg.sha512"
   ],
   "logs": []
 }
