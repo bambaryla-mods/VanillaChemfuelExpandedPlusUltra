@@ -32,8 +32,8 @@ namespace VCEPlusUltra
             }
             Map map = __instance.parent.Map;
             map.pollutionGrid.SetPolluted(cellToUnpollute, isPolluted: false);
-            __instance.currentIntervalPumps++;
-            if (__instance.Props.pumpEffecterDef != null)
+			__instance.currentIntervalPumps++;
+			if (__instance.Props.pumpEffecterDef != null)
             {
                 __instance.Props.pumpEffecterDef.Spawn(__instance.parent.Position, map).Cleanup();
             }

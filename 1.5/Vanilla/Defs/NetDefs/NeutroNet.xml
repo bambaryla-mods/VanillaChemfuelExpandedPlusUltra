@@ -54,7 +54,7 @@
     <pathCost>50</pathCost>
     <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.40</fillPercent>
+    <fillPercent>1</fillPercent>
     <tickerType>Normal</tickerType>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
@@ -382,7 +382,7 @@
     <pathCost>50</pathCost>
     <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.40</fillPercent>
+    <fillPercent>1</fillPercent>
     <tickerType>Normal</tickerType>
     <statBases>
       <MaxHitPoints>150</MaxHitPoints>
