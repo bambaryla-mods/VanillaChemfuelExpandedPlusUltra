@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  <VCEPU_ExtractNeutroamine>Extract 150 Neutroamine</VCEPU_ExtractNeutroamine>
-  <VCEPU_ExtractNeutroamineDesc>Extract 150 Neutroamine from the tank. A pawn will come to extract it.</VCEPU_ExtractNeutroamineDesc>
+  <VCEUE_ExtractNeutroamine>Extract 150 Neutroamine</VCEUE_ExtractNeutroamine>
+  <VCEUE_ExtractNeutroamineDesc>Extract 150 Neutroamine from the tank. A pawn will come to extract it.</VCEUE_ExtractNeutroamineDesc>
 
-  <VCEPU_CantRefineNeutroamine>Can't refine Neutroamine: Neutroamine Tanks are full</VCEPU_CantRefineNeutroamine>
+  <VCEUE_CantRefineNeutroamine>Can't refine Neutroamine: Neutroamine Tanks are full</VCEUE_CantRefineNeutroamine>
 
-  <VCEPU_NeutroamineValve>Switches Neutroamine flow on/off.</VCEPU_NeutroamineValve>
-  <VCEPU_NeutroamineValveDesc>Switches Neutroamine flow on/off. A pawn will come open/close the valve.</VCEPU_NeutroamineValveDesc>
+  <VCEUE_NeutroamineValve>Switches Neutroamine flow on/off.</VCEUE_NeutroamineValve>
+  <VCEUE_NeutroamineValveDesc>Switches Neutroamine flow on/off. A pawn will come open/close the valve.</VCEUE_NeutroamineValveDesc>
 
-  <VCEPU_ExtractFSX>Extract 150 FSX</VCEPU_ExtractFSX>
-  <VCEPU_ExtractFSXDesc>Extract 150 FSX from the tank. A pawn will come to extract it.</VCEPU_ExtractFSXDesc>
+  <VCEUE_ExtractFSX>Extract 150 FSX</VCEUE_ExtractFSX>
+  <VCEUE_ExtractFSXDesc>Extract 150 FSX from the tank. A pawn will come to extract it.</VCEUE_ExtractFSXDesc>
 
-  <VCEPU_CantRefineFSX>Can't refine FSX: FSX Tanks are full</VCEPU_CantRefineFSX>
+  <VCEUE_CantRefineFSX>Can't refine FSX: FSX Tanks are full</VCEUE_CantRefineFSX>
 
-  <VCEPU_FSXValve>Switches FSX flow on/off.</VCEPU_FSXValve>
-  <VCEPU_FSXValveDesc>Switches FSX flow on/off. A pawn will come open/close the valve.</VCEPU_FSXValveDesc>
+  <VCEUE_FSXValve>Switches FSX flow on/off.</VCEUE_FSXValve>
+  <VCEUE_FSXValveDesc>Switches FSX flow on/off. A pawn will come open/close the valve.</VCEUE_FSXValveDesc>
 
-  <VCEPU_ExtractPrometheum>Extract 150 Prometheum</VCEPU_ExtractPrometheum>
-  <VCEPU_ExtractPrometheumDesc>Extract 150 Prometheum from the tank. A pawn will come to extract it.</VCEPU_ExtractPrometheumDesc>
+  <VCEUE_ExtractPrometheum>Extract 150 Prometheum</VCEUE_ExtractPrometheum>
+  <VCEUE_ExtractPrometheumDesc>Extract 150 Prometheum from the tank. A pawn will come to extract it.</VCEUE_ExtractPrometheumDesc>
 
-  <VCEPU_CantRefinePrometheum>Can't refine Prometheum: Prometheum Tanks are full</VCEPU_CantRefinePrometheum>
+  <VCEUE_CantRefinePrometheum>Can't refine Prometheum: Prometheum Tanks are full</VCEUE_CantRefinePrometheum>
 
-  <VCEPU_PrometheumValve>Switches Prometheum flow on/off.</VCEPU_PrometheumValve>
-  <VCEPU_PrometheumValveDesc>Switches Prometheum flow on/off. A pawn will come open/close the valve.</VCEPU_PrometheumValveDesc>
+  <VCEUE_PrometheumValve>Switches Prometheum flow on/off.</VCEUE_PrometheumValve>
+  <VCEUE_PrometheumValveDesc>Switches Prometheum flow on/off. A pawn will come open/close the valve.</VCEUE_PrometheumValveDesc>
   
-  <VCEPU_ExtractDye>Extract 150 Dye</VCEPU_ExtractDye>
-  <VCEPU_ExtractDyeDesc>Extract 150 Dye from the tank. A pawn will come to extract it.</VCEPU_ExtractDyeDesc>
+  <VCEUE_ExtractDye>Extract 150 Dye</VCEUE_ExtractDye>
+  <VCEUE_ExtractDyeDesc>Extract 150 Dye from the tank. A pawn will come to extract it.</VCEUE_ExtractDyeDesc>
 
-  <VCEPU_CantRefineDye>Can't refine Dye: Dye Tanks are full</VCEPU_CantRefineDye>
+  <VCEUE_CantRefineDye>Can't refine Dye: Dye Tanks are full</VCEUE_CantRefineDye>
 
-  <VCEPU_DyeValve>Switches Dye flow on/off.</VCEPU_DyeValve>
-  <VCEPU_DyeValveDesc>Switches Dye flow on/off. A pawn will come open/close the valve.</VCEPU_DyeValveDesc>
+  <VCEUE_DyeValve>Switches Dye flow on/off.</VCEUE_DyeValve>
+  <VCEUE_DyeValveDesc>Switches Dye flow on/off. A pawn will come open/close the valve.</VCEUE_DyeValveDesc>
 
-  <VCEPU_ExtractWastepack>Extract 150 Wastepacks</VCEPU_ExtractWastepack>
-  <VCEPU_ExtractWastepackDesc>Extract 150 Wastepacks from the tank. A pawn will come to extract it.</VCEPU_ExtractWastepackDesc>
+  <VCEUE_ExtractWastepack>Extract 150 Wastepacks</VCEUE_ExtractWastepack>
+  <VCEUE_ExtractWastepackDesc>Extract 150 Wastepacks from the tank. A pawn will come to extract it.</VCEUE_ExtractWastepackDesc>
 
-  <VCEPU_CantRefineWastepack>Can't refine Wastepack: Wastepack Tanks are full</VCEPU_CantRefineWastepack>
-  <VCEPU_CantPumpWastepack>Can't pump Wastepack: Wastepack Tanks are full</VCEPU_CantPumpWastepack>
+  <VCEUE_CantRefineWastepack>Can't refine Wastepack: Wastepack Tanks are full</VCEUE_CantRefineWastepack>
+  <VCEUE_CantPumpWastepack>Can't pump Wastepack: Wastepack Tanks are full</VCEUE_CantPumpWastepack>
 
-  <VCEPU_WastepackValve>Switches Wastepack flow on/off.</VCEPU_WastepackValve>
-  <VCEPU_WastepackValveDesc>Switches Wastepack flow on/off. A pawn will come open/close the valve.</VCEPU_WastepackValveDesc>
+  <VCEUE_WastepackValve>Switches Wastepack flow on/off.</VCEUE_WastepackValve>
+  <VCEUE_WastepackValveDesc>Switches Wastepack flow on/off. A pawn will come open/close the valve.</VCEUE_WastepackValveDesc>
 </LanguageData>

@@ -4,33 +4,33 @@
 	<!-- Autoclave -->
 
 
-	<VCEPU_InsertCuringDesc>plasteel to cure</VCEPU_InsertCuringDesc>
+	<VCEUE_InsertCuringDesc>plasteel to cure</VCEUE_InsertCuringDesc>
 
-	<VCEPU_StartCuringInsertion>Begin Curing</VCEPU_StartCuringInsertion>
-	<VCEPU_StartCuringInsertionDesc>Begin curing plasteel in the autoclave</VCEPU_StartCuringInsertionDesc>
+	<VCEUE_StartCuringInsertion>Begin Curing</VCEUE_StartCuringInsertion>
+	<VCEUE_StartCuringInsertionDesc>Begin curing plasteel in the autoclave</VCEUE_StartCuringInsertionDesc>
 
-	<VCEPU_CancelCuring>Cancel Curing</VCEPU_CancelCuring>
-	<VCEPU_CancelCuringDesc>Cancel curing plasteel in the autoclave.</VCEPU_CancelCuringDesc>
+	<VCEUE_CancelCuring>Cancel Curing</VCEUE_CancelCuring>
+	<VCEUE_CancelCuringDesc>Cancel curing plasteel in the autoclave.</VCEUE_CancelCuringDesc>
 
-	<VCEPU_CuringFailurePower>The curing process has failed due to a lack of power in the autoclave</VCEPU_CuringFailurePower>
-	<VCEPU_CuringFailurePowerWarning>The curing process is in danger of failing due to a lack of power in the autoclave</VCEPU_CuringFailurePowerWarning>
+	<VCEUE_CuringFailurePower>The curing process has failed due to a lack of power in the autoclave</VCEUE_CuringFailurePower>
+	<VCEUE_CuringFailurePowerWarning>The curing process is in danger of failing due to a lack of power in the autoclave</VCEUE_CuringFailurePowerWarning>
 
-	<VCEPU_FinishedCuring>The plasteel has finished a simple curing process and is ready for retrieval</VCEPU_FinishedCuring>
+	<VCEUE_FinishedCuring>The plasteel has finished a simple curing process and is ready for retrieval</VCEUE_FinishedCuring>
 
 	<!-- Autoweave -->
 
 
-	<VCEPU_InsertWeavingDesc>weave to weave</VCEPU_InsertWeavingDesc>
+	<VCEUE_InsertWeavingDesc>weave to weave</VCEUE_InsertWeavingDesc>
 
-	<VCEPU_StartWeavingInsertion>Begin Weaving</VCEPU_StartWeavingInsertion>
-	<VCEPU_StartWeavingInsertionDesc>Begin weaving a thread of your choice in the autoweave</VCEPU_StartWeavingInsertionDesc>
+	<VCEUE_StartWeavingInsertion>Begin Weaving</VCEUE_StartWeavingInsertion>
+	<VCEUE_StartWeavingInsertionDesc>Begin weaving a thread of your choice in the autoweave</VCEUE_StartWeavingInsertionDesc>
 
-	<VCEPU_CancelWeaving>Cancel Weaving</VCEPU_CancelWeaving>
-	<VCEPU_CancelWeavingDesc>Cancel weaving a thread of your choice in the autoweave.</VCEPU_CancelWeavingDesc>
+	<VCEUE_CancelWeaving>Cancel Weaving</VCEUE_CancelWeaving>
+	<VCEUE_CancelWeavingDesc>Cancel weaving a thread of your choice in the autoweave.</VCEUE_CancelWeavingDesc>
 
-	<VCEPU_WeavingFailurePower>The weaving process has failed due to a lack of power in the autoweave</VCEPU_WeavingFailurePower>
-	<VCEPU_WeavingFailurePowerWarning>The weaving process is in danger of failing due to a lack of power in the autoweave</VCEPU_WeavingFailurePowerWarning>
+	<VCEUE_WeavingFailurePower>The weaving process has failed due to a lack of power in the autoweave</VCEUE_WeavingFailurePower>
+	<VCEUE_WeavingFailurePowerWarning>The weaving process is in danger of failing due to a lack of power in the autoweave</VCEUE_WeavingFailurePowerWarning>
 
-	<VCEPU_FinishedWeaving>The autoweave has finished weaving a thread of your choice and is ready for retrieval</VCEPU_FinishedWeaving>
+	<VCEUE_FinishedWeaving>The autoweave has finished weaving a thread of your choice and is ready for retrieval</VCEUE_FinishedWeaving>
 
 </LanguageData>
