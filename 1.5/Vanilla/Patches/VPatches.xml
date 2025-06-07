@@ -11,15 +11,6 @@
     <xpath>/Defs/ThingDef[defName="PS_DeepchemRefinery"]/comps/li[@Class="VCHE.CompProperties_Refinery"]</xpath>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="PS_DeepchemRefinery"]/researchPrerequisites</xpath>
-    <value>
-      <researchPrerequisites>
-        <li>VCEPU_ChemfuelRefining</li>
-      </researchPrerequisites>
-    </value>
-  </Operation>
-
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="PS_DeepchemRefinery"]</xpath>
     <value>
@@ -29,38 +20,63 @@
     </value>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="PS_DeepchemRefinery"]/comps/li[@Class="PipeSystem.CompProperties_ResourceProcessor"]</xpath>
-    <value>
-      <li MayRequire="ludeon.rimworld.biotech" Class="CompProperties_ThingContainer">
-        <compClass>CompThingContainer</compClass>
-        <stackLimit>1</stackLimit>
-        <drawContainedThing>false</drawContainedThing>
-        <dropEffecterDef>MechChargerWasteRemoved</dropEffecterDef>
-      </li>
-      <li MayRequire="ludeon.rimworld.biotech" Class="CompProperties_WasteProducer">
-        <showContentsInInspectPane>true</showContentsInInspectPane>
-      </li>
-      <li Class="PipeSystem.CompProperties_Resource">
-        <pipeNet>VCHE_DeepchemNet</pipeNet>
-      </li>
-      <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
-        <stopWhenWastepackFull>True</stopWhenWastepackFull>
-        <showBufferInfo>false</showBufferInfo>
-        <notWorkingKey>VCHE_CantRefine</notWorkingKey>
-        <progressBarOffset>(0, 0, -0.65)</progressBarOffset>
-        <showResultItem>true</showResultItem>
-        <processes>
-          <li>VCEPU_DeepchemIntoChemfuel</li>
-          <li>VCEPU_DeepchemIntoChemfuelTierII</li>
-          <li>VCEPU_DeepchemIntoChemfuelTierIII</li>
-        </processes>
-        <soundAmbient>VCHE_RefineryAmbient</soundAmbient>
-      </li>
-      <li Class="PipeSystem.CompProperties_Resource">
-        <pipeNet>VCEPU_ToxicWasteNet</pipeNet>
-      </li>
-    </value>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+    </mods>
+    <nomatch Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="PS_DeepchemRefinery"]/comps/li[@Class="PipeSystem.CompProperties_ResourceProcessor"]</xpath>
+      <value>
+        <li Class="PipeSystem.CompProperties_Resource">
+          <pipeNet>VCHE_DeepchemNet</pipeNet>
+        </li>
+        <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
+          <showBufferInfo>false</showBufferInfo>
+          <notWorkingKey>VCHE_CantRefine</notWorkingKey>
+          <progressBarOffset>(0, 0, -0.65)</progressBarOffset>
+          <showResultItem>true</showResultItem>
+          <processes>
+            <li>VCEUE_DeepchemIntoChemfuel</li>
+            <li>VCEUE_DeepchemIntoChemfuelTierII</li>
+            <li>VCEUE_DeepchemIntoChemfuelTierIII</li>
+          </processes>
+          <!-- <soundAmbient>VCHE_RefineryAmbient</soundAmbient> -->
+        </li>
+      </value>
+    </nomatch>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="PS_DeepchemRefinery"]/comps/li[@Class="PipeSystem.CompProperties_ResourceProcessor"]</xpath>
+      <value>
+        <li Class="CompProperties_ThingContainer">
+          <compClass>CompThingContainer</compClass>
+          <stackLimit>100</stackLimit>
+          <drawContainedThing>false</drawContainedThing>
+          <dropEffecterDef>MechChargerWasteRemoved</dropEffecterDef>
+        </li>
+        <li Class="CompProperties_WasteProducer">
+          <showContentsInInspectPane>true</showContentsInInspectPane>
+        </li>
+        <li Class="PipeSystem.CompProperties_Resource">
+          <pipeNet>VCHE_DeepchemNet</pipeNet>
+        </li>
+        <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
+          <showBufferInfo>false</showBufferInfo>
+          <notWorkingKey>VCHE_CantRefine</notWorkingKey>
+          <progressBarOffset>(0, 0, -0.65)</progressBarOffset>
+          <showResultItem>true</showResultItem>
+          <processes>
+            <li>VCEUE_DeepchemIntoChemfuel</li>
+            <li>VCEUE_DeepchemIntoChemfuelTierII</li>
+            <li>VCEUE_DeepchemIntoChemfuelTierIII</li>
+          </processes>
+          <!-- <soundAmbient>VCHE_RefineryAmbient</soundAmbient> -->
+          <stopWhenWastepackFull>True</stopWhenWastepackFull>
+        </li>
+        <li Class="PipeSystem.CompProperties_Resource">
+          <pipeNet>VCEUE_ToxicWasteNet</pipeNet>
+        </li>
+      </value>
+    </match>
 
   </Operation>
 
@@ -73,15 +89,15 @@
         <li Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[defName="TableElecLoom" or defName="TableLoom"]/recipes</xpath>
           <value>
-            <li>VCEPU_Make_DevilstrandFromRawThread</li>
-            <li>VCEPU_Make_Devilstrand_4</li>
-            <li>VCEPU_Make_Devilstrand_2</li>
-            <li>VCEPU_Make_HyperweaveFromRawThread</li>
-            <li>VCEPU_Make_Hyperweave_4</li>
-            <li>VCEPU_Make_Hyperweave_2</li>
-            <li>VCEPU_Make_SynthreadFromRawThread</li>
-            <li>VCEPU_Make_Synthread_4</li>
-            <li>VCEPU_Make_Synthread_2</li>
+            <li>VCEUE_Make_DevilstrandFromRawThread</li>
+            <li>VCEUE_Make_Devilstrand_4</li>
+            <li>VCEUE_Make_Devilstrand_2</li>
+            <li>VCEUE_Make_HyperweaveFromRawThread</li>
+            <li>VCEUE_Make_Hyperweave_4</li>
+            <li>VCEUE_Make_Hyperweave_2</li>
+            <li>VCEUE_Make_SynthreadFromRawThread</li>
+            <li>VCEUE_Make_Synthread_4</li>
+            <li>VCEUE_Make_Synthread_2</li>
           </value>
         </li>
       </operations>
@@ -98,15 +114,15 @@
         <li Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[defName="TableElecLoom" or defName="TableLoom"]/recipes</xpath>
           <value>
-            <li>VCEPU_Make_DevilstrandFromRawThread</li>
-            <li>VCEPU_Make_Devilstrand_4</li>
-            <li>VCEPU_Make_Devilstrand_2</li>
-            <li>VCEPU_Make_HyperweaveFromRawThread</li>
-            <li>VCEPU_Make_Hyperweave_4</li>
-            <li>VCEPU_Make_Hyperweave_2</li>
-            <li>VCEPU_Make_SynthreadFromRawThread</li>
-            <li>VCEPU_Make_Synthread_4</li>
-            <li>VCEPU_Make_Synthread_2</li>
+            <li>VCEUE_Make_DevilstrandFromRawThread</li>
+            <li>VCEUE_Make_Devilstrand_4</li>
+            <li>VCEUE_Make_Devilstrand_2</li>
+            <li>VCEUE_Make_HyperweaveFromRawThread</li>
+            <li>VCEUE_Make_Hyperweave_4</li>
+            <li>VCEUE_Make_Hyperweave_2</li>
+            <li>VCEUE_Make_SynthreadFromRawThread</li>
+            <li>VCEUE_Make_Synthread_4</li>
+            <li>VCEUE_Make_Synthread_2</li>
           </value>
         </li>
       </operations>
@@ -122,7 +138,7 @@
         <li Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[defName="PS_DeepchemRefinery"]/researchPrerequisites</xpath>
           <value>
-            <li>VCEPU_ChemfuelRefining</li>
+            <li>VCEUE_ChemfuelRefining</li>
           </value>
         </li>
         <li Class="PatchOperationAdd">
@@ -203,10 +219,10 @@
               <li>VCHE_DeepchemTap</li>
               <li>VCHE_DeepchemDrain</li>
               <li>VCHE_DeepchemDrain</li>
-              <li>VCEPU_RawPlasteelRefinery</li>
-              <li>VCEPU_AdvancedAutoWeavery</li>
-              <li>VCEPU_Autoweave</li>
-              <li>VCEPU_Autoclave</li>
+              <li>VCEUE_RawPlasteelRefinery</li>
+              <li>VCEUE_AdvancedAutoWeavery</li>
+              <li>VCEUE_Autoweave</li>
+              <li>VCEUE_Autoclave</li>
               <li>VCHE_DeepchemPumpjack</li>
             </relatedBuildCommands>
           </value>
@@ -224,10 +240,10 @@
                 <li>VCHE_DeepchemTap</li>
                 <li>VCHE_DeepchemDrain</li>
                 <li>VCHE_DeepchemDrain</li>
-                <li>VCEPU_RawPlasteelRefinery</li>
-                <li>VCEPU_AdvancedAutoWeavery</li>
-                <li>VCEPU_Autoweave</li>
-                <li>VCEPU_Autoclave</li>
+                <li>VCEUE_RawPlasteelRefinery</li>
+                <li>VCEUE_AdvancedAutoWeavery</li>
+                <li>VCEUE_Autoweave</li>
+                <li>VCEUE_Autoclave</li>
                 <li>VCHE_DeepchemPumpjack</li>
               </relatedBuildCommands>
             </building>
@@ -317,19 +333,4 @@
     </match>
   </Operation>
 
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Races Expanded - Android</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <operations>
-        <li Class="PatchOperationRemove">
-          <xpath>/Defs/ThingDef[defName="VREA_NeutroPipe" or defName="VREA_SubterraneanNeutroPipe" or defName="VREA_NeutroTank" or defName="VREA_NeutroTap" or defName="VREA_NeutroDrain"]</xpath>
-        </li>
-        <li Class="PatchOperationRemove">
-          <xpath>/Defs/PipeSystem.PipeNetDef[defName="VREA_NeutroamineNet"]</xpath>
-        </li>
-      </operations>
-    </match>
-  </Operation>
 </Patch>
