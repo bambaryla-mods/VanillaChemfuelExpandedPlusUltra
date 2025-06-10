@@ -25,7 +25,15 @@ namespace VCEPlusUltra
 
         public static void Postfix(CompWasteProducer __instance)
         {
-            __instance.parent.TryGetInnerInteractableThingOwner().TryDropAll(__instance.parent.Position, __instance.parent.Map, ThingPlaceMode.Near);
-        }
+            ThingOwner thingOwner = __instance.parent.TryGetInnerInteractableThingOwner();
+
+			foreach (Thing item in thingOwner)
+            {
+                if (item.def == ThingDefOf.Wastepack)
+                {
+                    thingOwner.TryDrop(item, __instance.parent.Position, __instance.parent.Map, ThingPlaceMode.Near, out Thing _);
+                }
+            }
+		}
     }
 }
