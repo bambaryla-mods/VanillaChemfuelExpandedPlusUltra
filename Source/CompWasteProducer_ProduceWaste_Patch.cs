@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:1.4/Vanilla/Source/CompWasteProducer_ProduceWaste_Patch.cs
 ﻿using HarmonyLib;
 using PipeSystem;
@@ -39,6 +40,8 @@ namespace VCEPlusUltra
     }
 }
 =======
+=======
+>>>>>>> 9e12e1fd49617d61074a9ff24981771c0688d1e9
 ﻿using HarmonyLib;
 using PipeSystem;
 using RimWorld;
@@ -65,4 +68,7 @@ namespace VCEPlusUltra
         }
     }
 }
+<<<<<<< HEAD
 >>>>>>> 5a0ce8438d8dab59ab06b6f6e404cb25694eac64:Source/CompWasteProducer_ProduceWaste_Patch.cs
+=======
+>>>>>>> 9e12e1fd49617d61074a9ff24981771c0688d1e9
