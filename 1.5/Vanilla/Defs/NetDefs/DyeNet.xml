@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
   <PipeSystem.PipeNetDef>
-    <defName>VCEPU_DyeNet</defName>
+    <defName>VCEUE_DyeNet</defName>
     <resource>
       <name>Dye</name>
       <unit>l</unit>
-      <color>(0.5, 0.5, 0.5)</color>
+      <color>(0.286,0.345,0.47)</color>
       <onlyShowStored>True</onlyShowStored>
       <offTexPath>Things/Item/Dye</offTexPath>
     </resource>
     <pipeDefs>
-      <li>VCEPU_DyePipe</li>
-      <li>VCEPU_UndergroundDyePipe</li>
+      <li>VCEUE_DyePipe</li>
+      <li>VCEUE_UndergroundDyePipe</li>
     </pipeDefs>
     <designator>
       <deconstructIconPath>UI/Gizmos/DyePipes_Deconstruct</deconstructIconPath>
       <designationCategoryDef>VCHE_PipeNetworks</designationCategoryDef>
     </designator>
     <overlayOptions>
-      <overlayColor>(0.5, 0.5, 0.5)</overlayColor>
+      <overlayColor>(0.286,0.345,0.47)</overlayColor>
     </overlayOptions>
     <linkToRefuelables>
       <li>
@@ -29,14 +29,14 @@
   </PipeSystem.PipeNetDef>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>VCEPU_DyePipe</defName>
+    <defName>VCEUE_DyePipe</defName>
     <label>Dye pipe</label>
     <description>Steel pipes designed to transport usable Dye to Dye tanks for storage or to Dye-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
     <category>Building</category>
     <tickerType>Rare</tickerType>
     <graphicData>
-      <texPath>Things/Building/Linked/DyePipes_Atlas</texPath>
+      <texPath>Things/Building/Linked/BluePipe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <linkType>Basic</linkType>
       <linkFlags>
@@ -53,16 +53,16 @@
       <isInert>true</isInert>
       <isEdifice>false</isEdifice>
       <blueprintGraphicData>
-        <texPath>Things/Building/Linked/DyePipes_Blueprint_Atlas</texPath>
+        <texPath>Things/Building/Linked/PipeAtlas</texPath>
       </blueprintGraphicData>
       <relatedBuildCommands>
-        <li>VCEPU_DyePipe</li>
-        <li>VCEPU_UndergroundDyePipe</li>
-        <li>VCEPU_DyeValve</li>
-        <li>VCEPU_DyeTank</li>
-        <li>VCEPU_DyeTap</li>
-        <li>VCEPU_DyeRefinery</li>
-        <li>VCEPU_DyeDrain</li>
+        <li>VCEUE_DyePipe</li>
+        <li>VCEUE_UndergroundDyePipe</li>
+        <li>VCEUE_DyeValve</li>
+        <li>VCEUE_DyeTank</li>
+        <li>VCEUE_DyeTap</li>
+        <li>VCEUE_DyeRefinery</li>
+        <li>VCEUE_DyeDrain</li>
       </relatedBuildCommands>
     </building>
     <drawerType>MapMeshOnly</drawerType>
@@ -80,7 +80,7 @@
     </costList>
     <comps>
       <li Class="PipeSystem.CompProperties_Resource">
-        <pipeNet>VCEPU_DyeNet</pipeNet>
+        <pipeNet>VCEUE_DyeNet</pipeNet>
       </li>
       <li Class="PipeSystem.CompProperties_SpillWhenDamaged">
         <spillEachTicks>600</spillEachTicks>
@@ -104,13 +104,13 @@
     <constructEffect>ConstructMetal</constructEffect>
     <clearBuildingArea>false</clearBuildingArea>
     <researchPrerequisites>
-      <li>VCEPU_DyeRefining</li>
+      <li>VCEUE_DyeRefining</li>
     </researchPrerequisites>
     <designatorDropdown>Pipes</designatorDropdown>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>VCEPU_UndergroundDyePipe</defName>
+    <defName>VCEUE_UndergroundDyePipe</defName>
     <label>subterranean Dye pipe</label>
     <description>Subterranean steel pipes designed to transport usable Dye to Dye tanks for storage or to Dye-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
@@ -119,6 +119,7 @@
     <graphicData>
       <texPath>UI/CSG/IConduit</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.286,0.345,0.47)</color>
       <linkType>Basic</linkType>
       <linkFlags>
         <li>Custom7</li>
@@ -134,16 +135,16 @@
       <isInert>true</isInert>
       <isEdifice>false</isEdifice>
       <blueprintGraphicData>
-        <texPath>Things/Building/Linked/DyePipes_Blueprint_Atlas</texPath>
+        <texPath>Things/Building/Linked/PipeAtlas</texPath>
       </blueprintGraphicData>
       <relatedBuildCommands>
-        <li>VCEPU_DyePipe</li>
-        <li>VCEPU_UndergroundDyePipe</li>
-        <li>VCEPU_DyeValve</li>
-        <li>VCEPU_DyeTank</li>
-        <li>VCEPU_DyeTap</li>
-        <li>VCEPU_DyeRefinery</li>
-        <li>VCEPU_DyeDrain</li>
+        <li>VCEUE_DyePipe</li>
+        <li>VCEUE_UndergroundDyePipe</li>
+        <li>VCEUE_DyeValve</li>
+        <li>VCEUE_DyeTank</li>
+        <li>VCEUE_DyeTap</li>
+        <li>VCEUE_DyeRefinery</li>
+        <li>VCEUE_DyeDrain</li>
       </relatedBuildCommands>
     </building>
     <drawerType>MapMeshOnly</drawerType>
@@ -161,7 +162,7 @@
     </costList>
     <comps>
       <li Class="PipeSystem.CompProperties_Resource">
-        <pipeNet>VCEPU_DyeNet</pipeNet>
+        <pipeNet>VCEUE_DyeNet</pipeNet>
       </li>
       <li Class="PipeSystem.CompProperties_SpillWhenDamaged">
         <spillEachTicks>1200</spillEachTicks>
@@ -185,21 +186,22 @@
     <constructEffect>ConstructMetal</constructEffect>
     <clearBuildingArea>false</clearBuildingArea>
     <researchPrerequisites>
-      <li>VCEPU_DyeRefining</li>
+      <li>VCEUE_DyeRefining</li>
     </researchPrerequisites>
     <designatorDropdown>Pipes</designatorDropdown>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>VCEPU_DyeValve</defName>
+    <defName>VCEUE_DyeValve</defName>
     <label>Dye valve</label>
     <description>Switches Dye flow on/off.</description>
     <thingClass>PipeSystem.Building_PipeValve</thingClass>
     <category>Building</category>
     <graphicData>
-      <texPath>Things/Building/Linked/DyeValve/DyeValve</texPath>
+      <texPath>Things/Building/Linked/Valve</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>Transparent</shaderType>
+      <color>(0.286,0.345,0.47)</color>
       <damageData>
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
@@ -208,13 +210,13 @@
       <ai_chillDestination>false</ai_chillDestination>
       <allowWireConnection>false</allowWireConnection>
       <relatedBuildCommands>
-        <li>VCEPU_DyePipe</li>
-        <li>VCEPU_UndergroundDyePipe</li>
-        <li>VCEPU_DyeValve</li>
-        <li>VCEPU_DyeTank</li>
-        <li>VCEPU_DyeTap</li>
-        <li>VCEPU_DyeRefinery</li>
-        <li>VCEPU_DyeDrain</li>
+        <li>VCEUE_DyePipe</li>
+        <li>VCEUE_UndergroundDyePipe</li>
+        <li>VCEUE_DyeValve</li>
+        <li>VCEUE_DyeTank</li>
+        <li>VCEUE_DyeTap</li>
+        <li>VCEUE_DyeRefinery</li>
+        <li>VCEUE_DyeDrain</li>
       </relatedBuildCommands>
     </building>
     <altitudeLayer>Building</altitudeLayer>
@@ -222,7 +224,7 @@
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
-      <WorkToBuild>200</WorkToBuild>
+      <WorkToBuild>20</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>-2</Beauty>
     </statBases>
@@ -233,13 +235,13 @@
     </costList>
     <comps>
       <li Class="PipeSystem.CompProperties_PipeValve">
-        <pipeNet>VCEPU_DyeNet</pipeNet>
+        <pipeNet>VCEUE_DyeNet</pipeNet>
         <alwaysLinkToPipes>true</alwaysLinkToPipes>
       </li>
       <li Class="CompProperties_Flickable">
         <commandTexture>Things/Item/Resource/Dye</commandTexture>
-        <commandLabelKey>VCEPU_DyeValve</commandLabelKey>
-        <commandDescKey>VCEPU_DyeValveDesc</commandDescKey>
+        <commandLabelKey>VCEUE_DyeValve</commandLabelKey>
+        <commandDescKey>VCEUE_DyeValveDesc</commandDescKey>
       </li>
     </comps>
     <rotatable>false</rotatable>
@@ -249,31 +251,35 @@
     <designationCategory>VCHE_PipeNetworks</designationCategory>
     <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites>
-      <li>VCEPU_DyeRefining</li>
+      <li>VCEUE_DyeRefining</li>
     </researchPrerequisites>
     <designatorDropdown>PipeValves</designatorDropdown>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>VCEPU_DyeTank</defName>
+    <defName>VCEUE_DyeTank</defName>
     <label>Dye tank</label>
     <description>An industrial liquid storage tank meant for storing Dye delivered via Dye pipe network. Tanks can be designated to be siphoned for usable Dye as needed. If damaged even lightly the escaping fumes will very swiftly create a gaseous fireball, the size of the resulting explosion will depend on the amount stored within.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <building>
       <relatedBuildCommands>
-        <li>VCEPU_DyePipe</li>
-        <li>VCEPU_UndergroundDyePipe</li>
-        <li>VCEPU_DyeValve</li>
-        <li>VCEPU_DyeTank</li>
-        <li>VCEPU_DyeTap</li>
-        <li>VCEPU_DyeRefinery</li>
-        <li>VCEPU_DyeDrain</li>
+        <li>VCEUE_DyePipe</li>
+        <li>VCEUE_UndergroundDyePipe</li>
+        <li>VCEUE_DyeValve</li>
+        <li>VCEUE_DyeTank</li>
+        <li>VCEUE_DyeTap</li>
+        <li>VCEUE_DyeRefinery</li>
+        <li>VCEUE_DyeDrain</li>
       </relatedBuildCommands>
     </building>
     <graphicData>
-      <texPath>Things/Building/Production/DyeTank</texPath>
+      <texPath>Things/Building/Production/DyeTank/DyeTank</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(2,3)</drawSize>
+      <drawSize>(3,3)</drawSize>
+      <drawOffsetEast>(0,2,0.25)</drawOffsetEast>
+      <drawOffsetWest>(0,2,0.25)</drawOffsetWest>
+      <drawOffsetNorth>(0,2,0.25)</drawOffsetNorth>
+      <drawOffsetSouth>(0,2,0.25)</drawOffsetSouth>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -290,25 +296,25 @@
     <tickerType>Normal</tickerType>
     <statBases>
       <MaxHitPoints>150</MaxHitPoints>
-      <WorkToBuild>800</WorkToBuild>
+      <WorkToBuild>1200</WorkToBuild>
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
-    <size>(2,3)</size>
+    <size>(2,2)</size>
     <costList>
       <Steel>140</Steel>
     </costList>
     <comps>
       <li Class="PipeSystem.CompProperties_ResourceStorage">
-        <pipeNet>VCEPU_DyeNet</pipeNet>
+        <pipeNet>VCEUE_DyeNet</pipeNet>
         <storageCapacity>600</storageCapacity>
         <barSize>(1.3, 0.25)</barSize>
         <margin>0.1</margin>
         <centerOffset>(0, 0, 0.35)</centerOffset>
         <extractOptions>
           <texPath>UI/Gizmos/ExtractDye</texPath>
-          <labelKey>VCEPU_ExtractDye</labelKey>
-          <descKey>VCEPU_ExtractDyeDesc</descKey>
+          <labelKey>VCEUE_ExtractDye</labelKey>
+          <descKey>VCEUE_ExtractDyeDesc</descKey>
           <extractAmount>150</extractAmount>
           <thing>Dye</thing>
           <ratio>1</ratio>
@@ -331,19 +337,21 @@
     <constructEffect>ConstructMetal</constructEffect>
     <canOverlapZones>false</canOverlapZones>
     <researchPrerequisites>
-      <li>VCEPU_DyeRefining</li>
+      <li>VCEUE_DyeRefining</li>
     </researchPrerequisites>
     <designatorDropdown>PipeContainers</designatorDropdown>
   </ThingDef>
 
   <ThingDef ParentName="FurnitureBase">
-    <defName>VCEPU_DyeTap</defName>
+    <defName>VCEUE_DyeTap</defName>
     <label>Dye tap</label>
     <description>A hopper-like storage basin meant to hold dispensed Dye from tanks periodically for use later.</description>
     <thingClass>Building_Storage</thingClass>
     <graphicData>
-      <texPath>Things/Building/Production/DyeTap</texPath>
+      <texPath>Things/Building/Production/TapGeneric</texPath>
+      <shaderType>CutoutComplex</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.286,0.345,0.47)</color>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -362,7 +370,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>8</Mass>
-      <WorkToBuild>600</WorkToBuild>
+      <WorkToBuild>30</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>0.5</Beauty>
     </statBases>
@@ -391,13 +399,13 @@
         </filter>
       </defaultStorageSettings>
       <relatedBuildCommands>
-        <li>VCEPU_DyePipe</li>
-        <li>VCEPU_UndergroundDyePipe</li>
-        <li>VCEPU_DyeValve</li>
-        <li>VCEPU_DyeTank</li>
-        <li>VCEPU_DyeTap</li>
-        <li>VCEPU_DyeRefinery</li>
-        <li>VCEPU_DyeDrain</li>
+        <li>VCEUE_DyePipe</li>
+        <li>VCEUE_UndergroundDyePipe</li>
+        <li>VCEUE_DyeValve</li>
+        <li>VCEUE_DyeTank</li>
+        <li>VCEUE_DyeTap</li>
+        <li>VCEUE_DyeRefinery</li>
+        <li>VCEUE_DyeDrain</li>
       </relatedBuildCommands>
     </building>
     <inspectorTabs>
@@ -409,23 +417,25 @@
     <canOverlapZones>false</canOverlapZones>
     <comps>
       <li Class="PipeSystem.CompProperties_ConvertResourceToThing">
-        <pipeNet>VCEPU_DyeNet</pipeNet>
+        <pipeNet>VCEUE_DyeNet</pipeNet>
         <thing>Dye</thing>
       </li>
     </comps>
     <researchPrerequisites>
-      <li>VCEPU_DyeRefining</li>
+      <li>VCEUE_DyeRefining</li>
     </researchPrerequisites>
     <designatorDropdown>PipeTaps</designatorDropdown>
   </ThingDef>
 
   <ThingDef ParentName="FurnitureBase">
-    <defName>VCEPU_DyeDrain</defName>
+    <defName>VCEUE_DyeDrain</defName>
     <label>Dye drain</label>
     <description>A hopper-like storage basin meant to input Dye into the network, filling up connected tanks.</description>
     <thingClass>Building_Storage</thingClass>
     <graphicData>
-      <texPath>Things/Building/Production/DyeDrain</texPath>
+      <color>(0.286,0.345,0.47)</color>
+      <texPath>Things/Building/Production/DrainGeneric</texPath>
+      <shaderType>CutoutComplex</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
@@ -447,7 +457,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>8</Mass>
-      <WorkToBuild>600</WorkToBuild>
+      <WorkToBuild>30</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>0.5</Beauty>
     </statBases>
@@ -476,13 +486,13 @@
         </filter>
       </defaultStorageSettings>
       <relatedBuildCommands>
-        <li>VCEPU_DyePipe</li>
-        <li>VCEPU_UndergroundDyePipe</li>
-        <li>VCEPU_DyeValve</li>
-        <li>VCEPU_DyeTank</li>
-        <li>VCEPU_DyeTap</li>
-        <li>VCEPU_DyeRefinery</li>
-        <li>VCEPU_DyeDrain</li>
+        <li>VCEUE_DyePipe</li>
+        <li>VCEUE_UndergroundDyePipe</li>
+        <li>VCEUE_DyeValve</li>
+        <li>VCEUE_DyeTank</li>
+        <li>VCEUE_DyeTap</li>
+        <li>VCEUE_DyeRefinery</li>
+        <li>VCEUE_DyeDrain</li>
       </relatedBuildCommands>
     </building>
     <inspectorTabs>
@@ -494,17 +504,17 @@
     <canOverlapZones>false</canOverlapZones>
     <comps>
       <li Class="PipeSystem.CompProperties_ConvertThingToResource">
-        <pipeNet>VCEPU_DyeNet</pipeNet>
+        <pipeNet>VCEUE_DyeNet</pipeNet>
         <thing>Dye</thing>
       </li>
     </comps>
     <researchPrerequisites>
-      <li>VCEPU_DyeRefining</li>
+      <li>VCEUE_DyeRefining</li>
     </researchPrerequisites>
     <designatorDropdown>PipeDrains</designatorDropdown>
   </ThingDef>
   <ThingDef ParentName="BuildingBase">
-    <defName>VCEPU_DyeRefinery</defName>
+    <defName>VCEUE_DyeRefinery</defName>
     <label>Dye refinery</label>
     <inspectorTabs>
       <li>PipeSystem.ITab_Processor</li>
@@ -513,19 +523,23 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <building>
       <relatedBuildCommands>
-        <li>VCEPU_DyePipe</li>
-        <li>VCEPU_UndergroundDyePipe</li>
-        <li>VCEPU_DyeValve</li>
-        <li>VCEPU_DyeTank</li>
-        <li>VCEPU_DyeTap</li>
-        <li>VCEPU_DyeRefinery</li>
-        <li>VCEPU_DyeDrain</li>
+        <li>VCEUE_DyePipe</li>
+        <li>VCEUE_UndergroundDyePipe</li>
+        <li>VCEUE_DyeValve</li>
+        <li>VCEUE_DyeTank</li>
+        <li>VCEUE_DyeTap</li>
+        <li>VCEUE_DyeRefinery</li>
+        <li>VCEUE_DyeDrain</li>
       </relatedBuildCommands>
     </building>
     <graphicData>
-      <texPath>Things/Building/Production/DyeRefinery</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3,3)</drawSize>
+      <texPath>Things/Building/Production/DyeRefinery/DyeRefinery</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,3.5)</drawSize>
+      <drawOffsetEast>(-0.2,2,0.1)</drawOffsetEast>
+      <drawOffsetWest>(0.2,2,0.1)</drawOffsetWest>
+      <drawOffsetNorth>(0,2,-0.2)</drawOffsetNorth>
+      <drawOffsetSouth>(0,2,0.2)</drawOffsetSouth>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -533,7 +547,7 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-    <rotatable>false</rotatable>
+    <rotatable>true</rotatable>
     <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
     <pathCost>50</pathCost>
@@ -543,51 +557,41 @@
     <tickerType>Normal</tickerType>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
-      <WorkToBuild>1000</WorkToBuild>
+      <WorkToBuild>2500</WorkToBuild>
       <Flammability>1.0</Flammability>
     </statBases>
-    <size>(3,3)</size>
+    <size>(3,2)</size>
     <costList>
       <Steel>200</Steel>
       <ComponentIndustrial>4</ComponentIndustrial>
     </costList>
     <comps>
-      <li MayRequire="ludeon.rimworld.biotech" Class="CompProperties_ThingContainer">
-        <compClass>CompThingContainer</compClass>
-        <stackLimit>1000</stackLimit>
-        <drawContainedThing>false</drawContainedThing>
-        <dropEffecterDef>MechChargerWasteRemoved</dropEffecterDef>
-      </li>
-      <li MayRequire="ludeon.rimworld.biotech" Class="CompProperties_WasteProducer">
-        <showContentsInInspectPane>true</showContentsInInspectPane>
-      </li>
       <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
-        <stopWhenWastepackFull>True</stopWhenWastepackFull>
         <showBufferInfo>false</showBufferInfo>
-        <notWorkingKey>VCEPU_CantRefineFSX</notWorkingKey>
+        <notWorkingKey>VCEUE_CantRefineFSX</notWorkingKey>
         <progressBarOffset>(0, 0, -0.65)</progressBarOffset>
         <showResultItem>true</showResultItem>
         <processes>
-          <li>VCEPU_ChemfuelIntoDye</li>
-          <li>VCEPU_ChemfuelIntoDyeTierII</li>
-          <li>VCEPU_ChemfuelIntoDyeTierIII</li>
-          <li MayRequire="ludeon.rimworld.biotech">VCEPU_WasteIntoDye</li>
-          <li MayRequire="ludeon.rimworld.biotech">VCEPU_WasteIntoDyeTierII</li>
-          <li MayRequire="ludeon.rimworld.biotech">VCEPU_WasteIntoDyeTierIII</li>
+          <li>VCEUE_ChemfuelIntoDye</li>
+          <li>VCEUE_ChemfuelIntoDyeTierII</li>
+          <li>VCEUE_ChemfuelIntoDyeTierIII</li>
+          <li MayRequire="ludeon.rimworld.biotech">VCEUE_WasteIntoDye</li>
+          <li MayRequire="ludeon.rimworld.biotech">VCEUE_WasteIntoDyeTierII</li>
+          <li MayRequire="ludeon.rimworld.biotech">VCEUE_WasteIntoDyeTierIII</li>
         </processes>
-        <soundAmbient>VCHE_RefineryAmbient</soundAmbient>
+        <!-- <soundAmbient>VCHE_RefineryAmbient</soundAmbient> -->
       </li>
       <li Class="PipeSystem.CompProperties_Resource">
-        <pipeNet>VCEPU_DyeNet</pipeNet>
+        <pipeNet>VCEUE_DyeNet</pipeNet>
       </li>
       <li Class="PipeSystem.CompProperties_Resource">
         <pipeNet>VCHE_ChemfuelNet</pipeNet>
       </li>
       <li Class="PipeSystem.CompProperties_Resource">
-        <pipeNet>VCEPU_NeutroamineNet</pipeNet>
+        <pipeNet>VREA_NeutroamineNet</pipeNet>
       </li>
       <li Class="PipeSystem.CompProperties_Resource" MayRequire="ludeon.rimworld.biotech">
-        <pipeNet>VCEPU_ToxicWasteNet</pipeNet>
+        <pipeNet>VCEUE_ToxicWasteNet</pipeNet>
       </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
@@ -601,7 +605,7 @@
     <constructEffect>ConstructMetal</constructEffect>
     <canOverlapZones>false</canOverlapZones>
     <researchPrerequisites>
-      <li>VCEPU_DyeRefining</li>
+      <li>VCEUE_DyeRefining</li>
     </researchPrerequisites>
     <designatorDropdown>Refineries</designatorDropdown>
   </ThingDef>

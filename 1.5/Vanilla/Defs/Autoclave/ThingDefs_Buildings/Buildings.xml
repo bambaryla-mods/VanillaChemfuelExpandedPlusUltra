@@ -2,28 +2,27 @@
 <Defs>
 
 	<ThingDef ParentName="BuildingBase">
-		<defName>VCEPU_Autoclave</defName>
+		<defName>VCEUE_Autoclave</defName>
 		<label>autoclave</label>
 		<description>An electric-powered pressure chamber that uses extreme heat and pressure to cure Raw Plasteel into usable Plasteel. This process takes a significant amount of time and energy, but the end result is a durable and versatile material suitable for a wide variety of uses. The autoclave is not affected by rain, but it can short-circuit if exposed to excess moisture or wet conditions. It is important to keep the autoclave indoors or under a roof to prevent damage.\n\nThis building requires a significant amount of power to operate and can produce a lot of heat. Make sure to have enough power and appropriate cooling measures in place before constructing it.</description>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
 		<building>
 			<relatedBuildCommands>
-				<li>VCEPU_RawPlasteelRefinery</li>
+				<li>VCEUE_RawPlasteelRefinery</li>
 				<li>PS_DeepchemRefinery</li>
 				<li>VCHE_DeepchemPipe</li>
 				<li>VCHE_UndergroundDeepchemPipe</li>
 				<li>VCHE_DeepchemValve</li>
 				<li>PS_DeepchemTank</li>
 				<li>VCHE_DeepchemTap</li>
-				<li>PS_DeepchemRefinery</li>
 				<li>VCHE_DeepchemDrain</li>
 			</relatedBuildCommands>
 		</building>
 		<graphicData>
-			<texPath>Things/Building/Production/Autoclave</texPath>
+			<texPath>Things/Building/Production/Autoclave/Autoclave_Off</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(3,3)</drawSize>
+			<drawSize>(2.5,2.5)</drawSize>
 			<shaderType>CutoutComplex</shaderType>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
@@ -43,7 +42,7 @@
 		<fillPercent>0.5</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
-			<WorkToBuild>600</WorkToBuild>
+			<WorkToBuild>1000</WorkToBuild>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -53,44 +52,44 @@
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
-		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<interactionCellOffset>(0,0,2)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
 		<researchPrerequisites>
-			<li>VCEPU_RawPlasteelRefining</li>
+			<li>VCEUE_RawPlasteelRefining</li>
 		</researchPrerequisites>
 		<comps>
 
 			<li Class="ItemProcessor.CompProperties_ItemProcessor">
-				<buildingOnGraphic>Things/Building/Production/Autoclave</buildingOnGraphic>
-				<buildingFinishedGraphic>Things/Building/Production/Autoclave</buildingFinishedGraphic>
+				<buildingOnGraphic>Things/Building/Production/Autoclave/Autoclave</buildingOnGraphic>
+				<buildingFinishedGraphic>Things/Building/Production/Autoclave/Autoclave</buildingFinishedGraphic>
 				<numberOfInputs>1</numberOfInputs>
 				<acceptsNoneAsInput>false</acceptsNoneAsInput>
-				<InsertFirstItemDesc>VCEPU_InsertCuringDesc</InsertFirstItemDesc>
+				<InsertFirstItemDesc>VCEUE_InsertCuringDesc</InsertFirstItemDesc>
 				<ignoresIngredientLists>true</ignoresIngredientLists>
 				<isSemiAutomaticMachine>true</isSemiAutomaticMachine>
-				<resetSemiautomaticIcon>UI/VCEPU_ResetCuring</resetSemiautomaticIcon>
+				<resetSemiautomaticIcon>UI/VCEUE_ResetCuring</resetSemiautomaticIcon>
 
-				<chooseIngredientsIcon>UI/VCEPU_RawPlasteelIcon</chooseIngredientsIcon>
+				<chooseIngredientsIcon>UI/VCEUE_RawPlasteelIcon</chooseIngredientsIcon>
 
-				<bringIngredientsText>VCEPU_StartCuringInsertion</bringIngredientsText>
-				<bringIngredientsDesc>VCEPU_StartCuringInsertionDesc</bringIngredientsDesc>
-				<bringIngredientsIcon>UI/VCEPU_InsertVCEPU_RawPlasteel</bringIngredientsIcon>
+				<bringIngredientsText>VCEUE_StartCuringInsertion</bringIngredientsText>
+				<bringIngredientsDesc>VCEUE_StartCuringInsertionDesc</bringIngredientsDesc>
+				<bringIngredientsIcon>UI/VCEUE_InsertVCEUE_RawPlasteel</bringIngredientsIcon>
 
-				<cancelIngredientsText>VCEPU_CancelCuring</cancelIngredientsText>
-				<cancelIngredientsDesc>VCEPU_CancelCuringDesc</cancelIngredientsDesc>
-				<cancelIngredientsIcon>UI/VCEPU_CancelCure</cancelIngredientsIcon>
+				<cancelIngredientsText>VCEUE_CancelCuring</cancelIngredientsText>
+				<cancelIngredientsDesc>VCEUE_CancelCuringDesc</cancelIngredientsDesc>
+				<cancelIngredientsIcon>UI/VCEUE_CancelCure</cancelIngredientsIcon>
 
 				<noPowerDestroysProgress>true</noPowerDestroysProgress>
 				<rareTicksToDestroy>10</rareTicksToDestroy>
-				<noPowerDestroysMessage>VCEPU_CuringFailurePower</noPowerDestroysMessage>
-				<noPowerDestroysInitialWarning>VCEPU_CuringFailurePowerWarning</noPowerDestroysInitialWarning>
+				<noPowerDestroysMessage>VCEUE_CuringFailurePower</noPowerDestroysMessage>
+				<noPowerDestroysInitialWarning>VCEUE_CuringFailurePowerWarning</noPowerDestroysInitialWarning>
 
 				<destroyIngredientsAtStartOfProcess>true</destroyIngredientsAtStartOfProcess>
 
 			</li>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>2000</basePowerConsumption>
+				<basePowerConsumption>1000</basePowerConsumption>
 				<shortCircuitInRain>true</shortCircuitInRain>
 			</li>
 
@@ -107,18 +106,17 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
-		<defName>VCEPU_Autoweave</defName>
+		<defName>VCEUE_Autoweave</defName>
 		<label>autoweave</label>
 		<building>
 			<relatedBuildCommands>
-				<li>VCEPU_AdvancedAutoWeavery</li>
+				<li>VCEUE_AdvancedAutoWeavery</li>
 				<li>PS_DeepchemRefinery</li>
 				<li>VCHE_DeepchemPipe</li>
 				<li>VCHE_UndergroundDeepchemPipe</li>
 				<li>VCHE_DeepchemValve</li>
 				<li>PS_DeepchemTank</li>
 				<li>VCHE_DeepchemTap</li>
-				<li>PS_DeepchemRefinery</li>
 				<li>VCHE_DeepchemDrain</li>
 			</relatedBuildCommands>
 		</building>
@@ -126,9 +124,13 @@
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
 		<graphicData>
-			<texPath>Things/Building/Production/AutoWeaverOffline</texPath>
+			<texPath>Things/Building/Production/Autoweave/Autoweave_Off</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(3,3)</drawSize>
+			<drawSize>(3.75,2.75)</drawSize>
+			<drawOffsetEast>(-0.15,2,0.25)</drawOffsetEast>
+			<drawOffsetWest>(0.15,2,0.25)</drawOffsetWest>
+			<drawOffsetNorth>(0,2,-0.05)</drawOffsetNorth>
+			<drawOffsetSouth>(0,2,-0.05)</drawOffsetSouth>
 			<shaderType>CutoutComplex</shaderType>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
@@ -148,55 +150,55 @@
 		<fillPercent>0.5</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
-			<WorkToBuild>600</WorkToBuild>
+			<WorkToBuild>1000</WorkToBuild>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
 		<tickerType>Normal</tickerType>
-		<size>(2,2)</size>
+		<size>(3,2)</size>
 		<designationCategory>Production</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
-		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<interactionCellOffset>(0,0,2)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
 		<researchPrerequisites>
-			<li>VCEPU_SynthreadRefining</li>
+			<li>VCEUE_SynthreadRefining</li>
 		</researchPrerequisites>
 		<comps>
 
 			<li Class="ItemProcessor.CompProperties_ItemProcessor">
-				<buildingOnGraphic>Things/Building/Production/AutoWeaverOnline</buildingOnGraphic>
-				<buildingFinishedGraphic>Things/Building/Production/AutoWeaverOnline</buildingFinishedGraphic>
+				<buildingOnGraphic>Things/Building/Production/Autoweave/Autoweave</buildingOnGraphic>
+				<buildingFinishedGraphic>Things/Building/Production/Autoweave/Autoweave</buildingFinishedGraphic>
 				<numberOfInputs>1</numberOfInputs>
 				<acceptsNoneAsInput>false</acceptsNoneAsInput>
-				<InsertFirstItemDesc>VCEPU_InsertWeavingDesc</InsertFirstItemDesc>
+				<InsertFirstItemDesc>VCEUE_InsertWeavingDesc</InsertFirstItemDesc>
 				<ignoresIngredientLists>true</ignoresIngredientLists>
 				<isSemiAutomaticMachine>true</isSemiAutomaticMachine>
 				<isMachineSpecifiesOutput>true</isMachineSpecifiesOutput>
-				<resetSemiautomaticIcon>UI/VCEPU_ResetWeaving</resetSemiautomaticIcon>
+				<resetSemiautomaticIcon>UI/VCEUE_ResetWeaving</resetSemiautomaticIcon>
 
-				<chooseIngredientsIcon>UI/VCEPU_RawThreadIcon</chooseIngredientsIcon>
+				<chooseIngredientsIcon>UI/VCEUE_RawThreadIcon</chooseIngredientsIcon>
 
-				<bringIngredientsText>VCEPU_StartWeavingInsertion</bringIngredientsText>
-				<bringIngredientsDesc>VCEPU_StartWeavingInsertionDesc</bringIngredientsDesc>
-				<bringIngredientsIcon>UI/VCEPU_InsertRawThread</bringIngredientsIcon>
+				<bringIngredientsText>VCEUE_StartWeavingInsertion</bringIngredientsText>
+				<bringIngredientsDesc>VCEUE_StartWeavingInsertionDesc</bringIngredientsDesc>
+				<bringIngredientsIcon>UI/VCEUE_InsertRawThread</bringIngredientsIcon>
 
-				<cancelIngredientsText>VCEPU_CancelWeaving</cancelIngredientsText>
-				<cancelIngredientsDesc>VCEPU_CancelWeavingDesc</cancelIngredientsDesc>
-				<cancelIngredientsIcon>UI/VCEPU_CancelWeave</cancelIngredientsIcon>
+				<cancelIngredientsText>VCEUE_CancelWeaving</cancelIngredientsText>
+				<cancelIngredientsDesc>VCEUE_CancelWeavingDesc</cancelIngredientsDesc>
+				<cancelIngredientsIcon>UI/VCEUE_CancelWeave</cancelIngredientsIcon>
 
 				<noPowerDestroysProgress>true</noPowerDestroysProgress>
 				<rareTicksToDestroy>10</rareTicksToDestroy>
-				<noPowerDestroysMessage>VCEPU_WeavingFailurePower</noPowerDestroysMessage>
-				<noPowerDestroysInitialWarning>VCEPU_WeavingFailurePowerWarning</noPowerDestroysInitialWarning>
+				<noPowerDestroysMessage>VCEUE_WeavingFailurePower</noPowerDestroysMessage>
+				<noPowerDestroysInitialWarning>VCEUE_WeavingFailurePowerWarning</noPowerDestroysInitialWarning>
 
 				<destroyIngredientsAtStartOfProcess>true</destroyIngredientsAtStartOfProcess>
 
 			</li>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>2000</basePowerConsumption>
+				<basePowerConsumption>1000</basePowerConsumption>
 				<shortCircuitInRain>true</shortCircuitInRain>
 			</li>
 

@@ -2,7 +2,7 @@
 <Defs>
     <!-- FSX Net -->
     <PipeSystem.ProcessDef>
-        <defName>VCEPU_ChemfuelIntoFSX</defName>
+        <defName>VCEUE_ChemfuelIntoFSX</defName>
         <label>Make FSX from Chemfuel</label>
         <ingredients>
             <li>
@@ -11,7 +11,7 @@
                 <countNeeded>80</countNeeded>
             </li>
             <li>
-                <pipeNet>VCEPU_NeutroamineNet</pipeNet>
+                <pipeNet>VREA_NeutroamineNet</pipeNet>
                 <thing>Neutroamine</thing>
                 <countNeeded>10</countNeeded>
             </li>
@@ -19,19 +19,19 @@
         <ticks>10000</ticks>
         <results>
             <li>
-                <pipeNet>VCEPU_FSXNet</pipeNet>
+                <pipeNet>VCEUE_FSXNet</pipeNet>
                 <thing>FSX</thing>
                 <count>10</count>
             </li>
         </results>
         <destroyIngredientsDirectly>true</destroyIngredientsDirectly>
         <researchPrerequisites>
-            <li>VCEPU_FSXRefining</li>
+            <li>VCEUE_FSXRefining</li>
         </researchPrerequisites>
     </PipeSystem.ProcessDef>
 
     <PipeSystem.ProcessDef MayRequire="vanillaexpanded.helixiengas">
-        <defName>VCEPU_HelixienGasIntoFSX</defName>
+        <defName>VCEUE_HelixienGasIntoFSX</defName>
         <label>Make FSX from Helixien</label>
         <ingredients>
             <li>
@@ -40,7 +40,7 @@
                 <countNeeded>850</countNeeded>
             </li>
             <li>
-                <pipeNet>VCEPU_NeutroamineNet</pipeNet>
+                <pipeNet>VREA_NeutroamineNet</pipeNet>
                 <thing>Neutroamine</thing>
                 <countNeeded>10</countNeeded>
             </li>
@@ -48,19 +48,19 @@
         <ticks>10000</ticks>
         <results>
             <li>
-                <pipeNet>VCEPU_FSXNet</pipeNet>
+                <pipeNet>VCEUE_FSXNet</pipeNet>
                 <thing>FSX</thing>
                 <count>10</count>
             </li>
         </results>
         <destroyIngredientsDirectly>true</destroyIngredientsDirectly>
         <researchPrerequisites>
-            <li>VCEPU_FSXRefiningGas</li>
+            <li>VCEUE_FSXRefiningGas</li>
         </researchPrerequisites>
     </PipeSystem.ProcessDef>
 
     <PipeSystem.ProcessDef>
-        <defName>VCEPU_ChemfuelIntoPrometheum</defName>
+        <defName>VCEUE_ChemfuelIntoPrometheum</defName>
         <label>Make Prometheum from Chemfuel</label>
         <ingredients>
             <li>
@@ -69,7 +69,7 @@
                 <countNeeded>3</countNeeded>
             </li>
             <li>
-                <pipeNet>VCEPU_NeutroamineNet</pipeNet>
+                <pipeNet>VREA_NeutroamineNet</pipeNet>
                 <thing>Neutroamine</thing>
                 <countNeeded>2</countNeeded>
             </li>
@@ -77,14 +77,14 @@
         <ticks>24000</ticks>
         <results>
             <li>
-                <pipeNet>VCEPU_PrometheumNet</pipeNet>
+                <pipeNet>VCEUE_PrometheumNet</pipeNet>
                 <thing>Prometheum</thing>
                 <count>3</count>
             </li>
         </results>
         <destroyIngredientsDirectly>true</destroyIngredientsDirectly>
         <researchPrerequisites>
-            <li>VCEPU_PrometheumRefining</li>
+            <li>VCEUE_PrometheumRefining</li>
         </researchPrerequisites>
     </PipeSystem.ProcessDef>
 </Defs>

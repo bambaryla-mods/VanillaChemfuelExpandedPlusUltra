@@ -2,13 +2,13 @@
 <Defs>
     <!-- Chemfuel Network -->
     <PipeSystem.ProcessDef>
-        <defName>VCEPU_DeepchemIntoChemfuelTierII</defName>
-        <label>Make Dye from Chemfuel faster.</label>
+        <defName>VCEUE_DeepchemIntoChemfuelTierII</defName>
+        <label>Make Chemfuel from Deepchem faster.</label>
         <ingredients>
             <li>
                 <pipeNet>VCHE_DeepchemNet</pipeNet>
                 <thing>VCHE_Deepchem</thing>
-                <countNeeded>1</countNeeded>
+                <countNeeded>3</countNeeded>
             </li>
         </ingredients>
         <ticks>200</ticks>
@@ -16,18 +16,18 @@
             <li>
                 <pipeNet>VCHE_ChemfuelNet</pipeNet>
                 <thing>Chemfuel</thing>
-                <count>3</count>
+                <count>9</count>
             </li>
         </results>
         <destroyIngredientsDirectly>true</destroyIngredientsDirectly>
         <researchPrerequisites>
-            <li>VCEPU_ChemfuelRefiningTierII</li>
+            <li>VCEUE_ChemfuelRefiningTierII</li>
         </researchPrerequisites>
     </PipeSystem.ProcessDef>
 
     <!-- Dye Network -->
     <PipeSystem.ProcessDef>
-        <defName>VCEPU_ChemfuelIntoDyeTierII</defName>
+        <defName>VCEUE_ChemfuelIntoDyeTierII</defName>
         <label>Make Dye from Chemfuel faster.</label>
         <ingredients>
             <li>
@@ -36,7 +36,7 @@
                 <countNeeded>7</countNeeded>
             </li>
             <li>
-                <pipeNet>VCEPU_NeutroamineNet</pipeNet>
+                <pipeNet>VREA_NeutroamineNet</pipeNet>
                 <thing>Neutroamine</thing>
                 <countNeeded>3</countNeeded>
             </li>
@@ -44,20 +44,20 @@
         <ticks>6000</ticks>
         <results>
             <li>
-                <pipeNet>VCEPU_DyeNet</pipeNet>
+                <pipeNet>VCEUE_DyeNet</pipeNet>
                 <thing>Dye</thing>
                 <count>20</count>
             </li>
         </results>
         <destroyIngredientsDirectly>true</destroyIngredientsDirectly>
         <researchPrerequisites>
-            <li>VCEPU_DyeRefiningTierII</li>
+            <li>VCEUE_DyeRefiningTierII</li>
         </researchPrerequisites>
     </PipeSystem.ProcessDef>
 
     <!-- Neutroamine Network -->
     <PipeSystem.ProcessDef>
-        <defName>VCEPU_DeepchemIntoNeutroamineTierII</defName>
+        <defName>VCEUE_DeepchemIntoNeutroamineTierII</defName>
         <label>Make Neutroamine from Deepchem faster.</label>
         <ingredients>
             <li>
@@ -69,14 +69,14 @@
         <ticks>8000</ticks>
         <results>
             <li>
-                <pipeNet>VCEPU_NeutroamineNet</pipeNet>
+                <pipeNet>VREA_NeutroamineNet</pipeNet>
                 <thing>Neutroamine</thing>
                 <count>3</count>
             </li>
         </results>
         <destroyIngredientsDirectly>true</destroyIngredientsDirectly>
         <researchPrerequisites>
-            <li>VCEPU_NeutroamineRefiningTierII</li>
+            <li>VCEUE_NeutroamineRefiningTierII</li>
         </researchPrerequisites>
     </PipeSystem.ProcessDef>
 </Defs>

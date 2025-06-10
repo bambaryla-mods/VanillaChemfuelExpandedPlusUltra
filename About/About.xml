@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Vanilla Chemfuel Expanded Plus Ultra</name>
+  <name>Vanilla Chemfuel Expanded - Unofficial Expansion</name>
   <author>Bambaryła, ThatBartGuy</author>
   <url></url>
-  <description>Vanilla Chemfuel Expanded Plus Ultra was created to utilize the pipelines' framework created by Vanilla Expanded Team.
-    It builds and expands upon the Vanilla Chemfuel expanded mod with new refineries and resources to produce. 
+  <description>Vanilla Chemfuel Expanded - Unofficial Expansion was created to utilize the pipelines' framework created by Vanilla Expanded Team.
+    It builds and expands upon the Vanilla Chemfuel expanded mod with new refineries and resources to produce.
     All of the refineries, taps, drains, valves, tanks and pipelines are neatly gathered into designator dropdowns (right-click list) to declutter the architect menu.
-    
+
     Currently the mod contains:
 
+    Changes to original VCE refineries, to adhere to the new subsystem created by Kikohi.
+
     Neutroamine refinery, producing neutroamine from deepchem; full neutroamine network with taps, drains, pipes, valves and tanks.
-    
+
     Raw Plasteel refinery, producing Raw Plasteel (new resource) from deepchem. Raw Plasteel can be refined automatically in an autoclave into usable Plasteel, or manually smelted in a smelter.
     Automatic Weavery, producing Unrefined Fibers (new resource) from deepchem. Unrefined fibers can be weaved into hyperweave, synthread or devilstrand automatically in an autoweave, or manually on a tailor's bench.
 
     If you have Biotech enabled, the mod adds a toxic waste network, allowing you to store and transfer the wastepacks securely across your colony.
     It comes with pipelines, drains, pipes, taps, valves and special tanks. These tanks have to be kept powered at all times, otherwise they'll take damage from the corrosive waste inside. On destruction, they will explode and spread pollution and toxic gas in your colony.
-    It comes with additional feature that allows the pollution pumps to be connected to the pipeline so your colonists do not need to carry the wastepacks themselves.
-    Toxic waste can be used in a dye refinery to produce dye, allowing you to color your colony to your hearts' desire. 
+    It comes with additional feature that allows the pollution pumps, mech rechargers and gestators to be connected to the pipeline so your colonists do not need to carry the wastepacks themselves.
+    Toxic waste can be used in a dye refinery to produce dye, allowing you to color your colony to your hearts' desire.
     The dye comes with its own network of pipes, drains, taps, valves and containers as well, allowing you to produce the dye and use it anywhere you like.
     Since dye is easily producible now, its value is decreased for balance reasons.
 
     If you have Toxic Wastepack Generator Plus, our pipeline will replace TWGP's pipeline and remove it from the game (needs to be rebuilt on an ongoing save).
 
-    If you have Vanilla Races Expanded: Androids, our pipeline will replace VRE:A's neutroamine pipeline and remove it from the game (needs to be rebuilt on an ongoing save).
+    Uses the same name as Vanilla Races Expanded - Androids for the pipe network, so should be fully compatible with it and derivative works.
 
-    If you have Combat Extended enabled, the mod adds an FSX refinery, producing FSX from chemfuel and a Prometheum refinery, producing Prometheum from deepchem.
+    If you have Combat Extended enabled, the mod adds an FSX refinery, producing FSX from chemfuel and neutroamine and a Prometheum refinery, producing Prometheum from deepchem and neutroamine.
     Both of the refineries come with a complete set of pipelines, drains, pipes, taps, and tanks. FSX and Prometheum tanks are _highly_ volatile!
 
-    If you have both Helixien Gas Expanded and Combat Extended, then FSX will be produced using Helixien Gas instead of chemfuel. Helixien gas network will also be placed in the aforementioned designator dropdowns.
+    If you have both Helixien Gas Expanded and Combat Extended, then FSX will be produced using Helixien Gas or chemfuel. Helixien gas network will also be placed in the aforementioned designator dropdowns.
 
     If you have Neutroamine Cooler, the Vanilla Expanded Framework understands that it should be able to use the Neutroamine network.
 
@@ -38,14 +40,18 @@
 
     If you have Advanced Pollution Pump, it will also feed the waste network.
 
+    There are 3 tiers of refining recipes, so that you can scale with more buildings or by adding more research.
+
+    Known issue: some icons are missing and i have no idea how to figure them out.
+    Known issue: not sure if it is an issue actually, but the waste gathering is kinda unintuitive at times :)
 
     Shout out to Dubwise for Rimefeller mod which was a huge inspiration for this one!
     Thanks to ThatBartGuy for great art and to Sovereign for introducing me to ThatBartGuy.
     Thanks to Kikohi for creating and sharing the pipeline network with us!
-    Thanks to Hobbes for implementing the specialist tanks and pollution pump connection.
+    Thanks to Taranchuk for implementing the specialist tanks and pollution pump connection.
+    Thanks to Thadge for recompiling to 1.5!
   </description>
   <supportedVersions>
-    <li>1.4</li>
     <li>1.5</li>
   </supportedVersions>
   <packageId>bambaryla.VCEPU</packageId>
@@ -73,6 +79,7 @@
     <li>brrainz.harmony</li>
     <li>aleyck.spacercoolers</li>
     <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+    <li>bazel.toxgenplus.2</li>
     <li>vanillaexpanded.vchemfuele</li>
     <li>ceteam.combatextended</li>
     <li>vanillaexpanded.helixiengas</li>

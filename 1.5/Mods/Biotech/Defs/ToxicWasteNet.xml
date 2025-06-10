@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
   <PipeSystem.PipeNetDef>
-    <defName>VCEPU_ToxicWasteNet</defName>
+    <defName>VCEUE_ToxicWasteNet</defName>
     <resource>
       <name>Wastepack</name>
       <unit>l</unit>
-      <color>(0.02, 0.85, 0.30)</color>
+      <color>(0.451,0.58,0.431)</color>
       <onlyShowStored>True</onlyShowStored>
       <offTexPath>Things/Item/Resource/Wastepack</offTexPath>
     </resource>
     <pipeDefs>
-      <li>VCEPU_ToxicWastePipe</li>
-      <li>VCEPU_UndergroundToxicWastePipe</li>
+      <li>VCEUE_ToxicWastePipe</li>
+      <li>VCEUE_UndergroundToxicWastePipe</li>
     </pipeDefs>
     <designator>
       <deconstructIconPath>UI/Gizmos/ToxicWastePipes_Deconstruct</deconstructIconPath>
       <designationCategoryDef>VCHE_PipeNetworks</designationCategoryDef>
     </designator>
     <overlayOptions>
-      <overlayColor>(0.02, 0.85, 0.30)</overlayColor>
+      <overlayColor>(0.451,0.58,0.431)</overlayColor>
     </overlayOptions>
     <linkToRefuelables>
       <li>
@@ -29,14 +29,14 @@
   </PipeSystem.PipeNetDef>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>VCEPU_ToxicWastePipe</defName>
+    <defName>VCEUE_ToxicWastePipe</defName>
     <label>toxic waste pipe</label>
     <description>Steel pipes designed to transport usable toxic waste for storage or to toxic waste-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
     <category>Building</category>
     <tickerType>Rare</tickerType>
     <graphicData>
-      <texPath>Things/Building/Linked/ToxicWastePipes_Atlas</texPath>
+      <texPath>Things/Building/Linked/GreenPipe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <linkType>Basic</linkType>
       <linkFlags>
@@ -50,18 +50,18 @@
     <uiIconScale>0.7</uiIconScale>
     <building>
       <relatedBuildCommands>
-        <li>VCEPU_ToxicWastePipe</li>
-        <li>VCEPU_UndergroundToxicWastePipe</li>
-        <li>VCEPU_ToxicWasteValve</li>
-        <li>VCEPU_ToxicWasteTank</li>
-        <li>VCEPU_ToxicWasteTap</li>
-        <li>VCEPU_ToxicWasteDrain</li>
+        <li>VCEUE_ToxicWastePipe</li>
+        <li>VCEUE_UndergroundToxicWastePipe</li>
+        <li>VCEUE_ToxicWasteValve</li>
+        <li>VCEUE_ToxicWasteTank</li>
+        <li>VCEUE_ToxicWasteTap</li>
+        <li>VCEUE_ToxicWasteDrain</li>
       </relatedBuildCommands>
       <ai_chillDestination>false</ai_chillDestination>
       <isInert>true</isInert>
       <isEdifice>false</isEdifice>
       <blueprintGraphicData>
-        <texPath>Things/Building/Linked/ToxicWastePipes_Blueprint_Atlas</texPath>
+        <texPath>Things/Building/Linked/PipeAtlas</texPath>
       </blueprintGraphicData>
     </building>
     <drawerType>MapMeshOnly</drawerType>
@@ -79,7 +79,7 @@
     </costList>
     <comps>
       <li Class="PipeSystem.CompProperties_Resource">
-        <pipeNet>VCEPU_ToxicWasteNet</pipeNet>
+        <pipeNet>VCEUE_ToxicWasteNet</pipeNet>
       </li>
       <li Class="PipeSystem.CompProperties_SpillWhenDamaged">
         <spillEachTicks>600</spillEachTicks>
@@ -104,12 +104,12 @@
     <constructEffect>ConstructMetal</constructEffect>
     <clearBuildingArea>false</clearBuildingArea>
     <researchPrerequisites>
-      <li>VCEPU_Biotech_DyeRefining</li>
+      <li>VCEUE_Biotech_DyeRefining</li>
     </researchPrerequisites>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>VCEPU_UndergroundToxicWastePipe</defName>
+    <defName>VCEUE_UndergroundToxicWastePipe</defName>
     <label>subterranean toxic waste pipe</label>
     <description>Subterranean steel pipes designed to transport usable toxic waste to tanks for storage or to toxic waste-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
@@ -131,18 +131,18 @@
     <uiIconScale>0.7</uiIconScale>
     <building>
       <relatedBuildCommands>
-        <li>VCEPU_ToxicWastePipe</li>
-        <li>VCEPU_UndergroundToxicWastePipe</li>
-        <li>VCEPU_ToxicWasteValve</li>
-        <li>VCEPU_ToxicWasteTank</li>
-        <li>VCEPU_ToxicWasteTap</li>
-        <li>VCEPU_ToxicWasteDrain</li>
+        <li>VCEUE_ToxicWastePipe</li>
+        <li>VCEUE_UndergroundToxicWastePipe</li>
+        <li>VCEUE_ToxicWasteValve</li>
+        <li>VCEUE_ToxicWasteTank</li>
+        <li>VCEUE_ToxicWasteTap</li>
+        <li>VCEUE_ToxicWasteDrain</li>
       </relatedBuildCommands>
       <ai_chillDestination>false</ai_chillDestination>
       <isInert>true</isInert>
       <isEdifice>false</isEdifice>
       <blueprintGraphicData>
-        <texPath>Things/Building/Linked/ToxicWastePipes_Blueprint_Atlas</texPath>
+        <texPath>Things/Building/Linked/PipeAtlas</texPath>
       </blueprintGraphicData>
     </building>
     <drawerType>MapMeshOnly</drawerType>
@@ -151,7 +151,7 @@
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <statBases>
       <MaxHitPoints>400</MaxHitPoints>
-      <WorkToBuild>12000</WorkToBuild>
+      <WorkToBuild>120</WorkToBuild>
       <Flammability>0</Flammability>
     </statBases>
     <placingDraggableDimensions>1</placingDraggableDimensions>
@@ -160,7 +160,7 @@
     </costList>
     <comps>
       <li Class="PipeSystem.CompProperties_Resource">
-        <pipeNet>VCEPU_ToxicWasteNet</pipeNet>
+        <pipeNet>VCEUE_ToxicWasteNet</pipeNet>
       </li>
       <li Class="PipeSystem.CompProperties_SpillWhenDamaged">
         <spillEachTicks>1200</spillEachTicks>
@@ -184,32 +184,33 @@
     <constructEffect>ConstructMetal</constructEffect>
     <clearBuildingArea>false</clearBuildingArea>
     <researchPrerequisites>
-      <li>VCEPU_Biotech_DyeRefining</li>
+      <li>VCEUE_Biotech_DyeRefining</li>
     </researchPrerequisites>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>VCEPU_ToxicWasteValve</defName>
+    <defName>VCEUE_ToxicWasteValve</defName>
     <label>toxic waste valve</label>
     <description>Switches toxic waste flow on/off.</description>
     <thingClass>PipeSystem.Building_PipeValve</thingClass>
     <category>Building</category>
     <graphicData>
-      <texPath>Things/Building/Linked/ToxicWasteValve/ToxicWasteValve</texPath>
+      <texPath>Things/Building/Linked/Valve</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>Transparent</shaderType>
       <damageData>
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
+      <color>(0.451,0.58,0.431)</color>
     </graphicData>
     <building>
       <relatedBuildCommands>
-        <li>VCEPU_ToxicWastePipe</li>
-        <li>VCEPU_UndergroundToxicWastePipe</li>
-        <li>VCEPU_ToxicWasteValve</li>
-        <li>VCEPU_ToxicWasteTank</li>
-        <li>VCEPU_ToxicWasteTap</li>
-        <li>VCEPU_ToxicWasteDrain</li>
+        <li>VCEUE_ToxicWastePipe</li>
+        <li>VCEUE_UndergroundToxicWastePipe</li>
+        <li>VCEUE_ToxicWasteValve</li>
+        <li>VCEUE_ToxicWasteTank</li>
+        <li>VCEUE_ToxicWasteTap</li>
+        <li>VCEUE_ToxicWasteDrain</li>
       </relatedBuildCommands>
       <ai_chillDestination>false</ai_chillDestination>
       <allowWireConnection>false</allowWireConnection>
@@ -219,7 +220,7 @@
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
-      <WorkToBuild>20000</WorkToBuild>
+      <WorkToBuild>100</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>-2</Beauty>
     </statBases>
@@ -230,13 +231,13 @@
     </costList>
     <comps>
       <li Class="PipeSystem.CompProperties_PipeValve">
-        <pipeNet>VCEPU_ToxicWasteNet</pipeNet>
+        <pipeNet>VCEUE_ToxicWasteNet</pipeNet>
         <alwaysLinkToPipes>true</alwaysLinkToPipes>
       </li>
       <li Class="CompProperties_Flickable">
         <commandTexture>Things/Item/Resource/ToxicWaste</commandTexture>
-        <commandLabelKey>VCEPU_TWValve</commandLabelKey>
-        <commandDescKey>VCEPU_TWValveDesc</commandDescKey>
+        <commandLabelKey>VCEUE_WastepackValve</commandLabelKey>
+        <commandDescKey>VCEUE_WastepackValveDesc</commandDescKey>
       </li>
     </comps>
     <rotatable>false</rotatable>
@@ -246,20 +247,24 @@
     <designationCategory>VCHE_PipeNetworks</designationCategory>
     <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites>
-      <li>VCEPU_Biotech_DyeRefining</li>
+      <li>VCEUE_Biotech_DyeRefining</li>
     </researchPrerequisites>
     <designatorDropdown>PipeValves</designatorDropdown>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>VCEPU_ToxicWasteTank</defName>
+    <defName>VCEUE_ToxicWasteTank</defName>
     <label>toxic waste tank</label>
-    <description>An industrial liquid storage tank meant for storing toxic waste delivered via toxic waste pipe network. Tanks can be designated to be siphoned for usable toxic waste as needed. If damaged even lightly the escaping fumes will very swiftly create a gaseous toxic fireball, the size of the resulting explosion will depend on the amount stored within.</description>
+    <description>An industrial liquid storage tank meant for storing toxic waste delivered via toxic waste pipe network. It requires power. When unpowered and filled, will take damage and cause a toxic fallout on destruction. Tanks can be designated to be siphoned for usable toxic waste as needed. If damaged even lightly the escaping fumes will very swiftly create a gaseous toxic fireball, the size of the resulting explosion will depend on the amount stored within.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Things/Building/Production/ToxicWasteTank</texPath>
+      <texPath>Things/Building/Production/ToxicWasteTank/ToxicWasteTank</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(2,3)</drawSize>
+      <drawSize>(4,4)</drawSize>
+      <drawOffsetEast>(0,2,0.2)</drawOffsetEast>
+      <drawOffsetWest>(0,2,0.2)</drawOffsetWest>
+      <drawOffsetNorth>(0,2,0.2)</drawOffsetNorth>
+      <drawOffsetSouth>(0,2,0.2)</drawOffsetSouth>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -275,8 +280,8 @@
     <fillPercent>1</fillPercent>
     <tickerType>Normal</tickerType>
     <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
-      <WorkToBuild>80000</WorkToBuild>
+      <MaxHitPoints>2750</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -286,25 +291,25 @@
     </costList>
     <building>
       <relatedBuildCommands>
-        <li>VCEPU_ToxicWastePipe</li>
-        <li>VCEPU_UndergroundToxicWastePipe</li>
-        <li>VCEPU_ToxicWasteValve</li>
-        <li>VCEPU_ToxicWasteTank</li>
-        <li>VCEPU_ToxicWasteTap</li>
-        <li>VCEPU_ToxicWasteDrain</li>
+        <li>VCEUE_ToxicWastePipe</li>
+        <li>VCEUE_UndergroundToxicWastePipe</li>
+        <li>VCEUE_ToxicWasteValve</li>
+        <li>VCEUE_ToxicWasteTank</li>
+        <li>VCEUE_ToxicWasteTap</li>
+        <li>VCEUE_ToxicWasteDrain</li>
       </relatedBuildCommands>
     </building>
     <comps>
       <li Class="PipeSystem.CompProperties_ResourceStorage">
-        <pipeNet>VCEPU_ToxicWasteNet</pipeNet>
+        <pipeNet>VCEUE_ToxicWasteNet</pipeNet>
         <storageCapacity>500</storageCapacity>
         <barSize>(1.3, 0.25)</barSize>
         <margin>0.1</margin>
         <centerOffset>(0, 0, 0.35)</centerOffset>
         <extractOptions>
           <texPath>UI/Gizmos/ExtractWastepack</texPath>
-          <labelKey>VCEPU_ExtractWastepack</labelKey>
-          <descKey>VCEPU_ExtractWastepackDesc</descKey>
+          <labelKey>VCEUE_ExtractWastepack</labelKey>
+          <descKey>VCEUE_ExtractWastepackDesc</descKey>
           <extractAmount>150</extractAmount>
           <thing>Wastepack</thing>
           <ratio>1</ratio>
@@ -320,18 +325,18 @@
         <preExplosionSpawnChance>1</preExplosionSpawnChance>
         <wickTicks>70~150</wickTicks>
       </li>
-	  <li Class="VCEPlusUltra.CompProperties_DamageWhenUnpowered">
-		<tickRateInterval>60</tickRateInterval>
-		<damageAmount>5</damageAmount>
-	  </li>
+      <li Class="VCEPlusUltra.CompProperties_DamageWhenUnpowered">
+        <tickRateInterval>960</tickRateInterval>
+        <damageAmount>25</damageAmount>
+      </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>100</basePowerConsumption>
+        <basePowerConsumption>250</basePowerConsumption>
         <shortCircuitInRain>false</shortCircuitInRain>
       </li>
-	  <li Class="VCEPlusUltra.CompProperties_CauseConditionWhenDestroyed">
-		<condition>ToxicFallout</condition>
-	  </li>
+      <li Class="VCEPlusUltra.CompProperties_CauseConditionWhenDestroyed">
+        <condition>ToxicFallout</condition>
+      </li>
     </comps>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <designationCategory>VCHE_PipeNetworks</designationCategory>
@@ -339,18 +344,19 @@
     <constructEffect>ConstructMetal</constructEffect>
     <canOverlapZones>false</canOverlapZones>
     <researchPrerequisites>
-      <li>VCEPU_Biotech_DyeRefining</li>
+      <li>VCEUE_Biotech_DyeRefining</li>
     </researchPrerequisites>
     <designatorDropdown>PipeContainers</designatorDropdown>
   </ThingDef>
 
   <ThingDef ParentName="FurnitureBase">
-    <defName>VCEPU_ToxicWasteTap</defName>
+    <defName>VCEUE_ToxicWasteTap</defName>
     <label>toxic waste tap</label>
     <description>A hopper-like storage basin meant to hold dispensed toxic waste from tanks periodically for use later.</description>
     <thingClass>Building_Storage</thingClass>
     <graphicData>
-      <texPath>Things/Building/Production/ToxicWasteTap</texPath>
+      <texPath>Things/Building/Production/TapGeneric</texPath>
+      <shaderType>CutoutComplex</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
@@ -360,6 +366,7 @@
       </damageData>
       <drawRotated>false</drawRotated>
       <allowFlip>false</allowFlip>
+      <color>(0.451,0.58,0.431)</color>
     </graphicData>
     <rotatable>false</rotatable>
     <altitudeLayer>Building</altitudeLayer>
@@ -370,7 +377,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>8</Mass>
-      <WorkToBuild>60000</WorkToBuild>
+      <WorkToBuild>30</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>0.5</Beauty>
     </statBases>
@@ -380,12 +387,12 @@
     </costList>
     <building>
       <relatedBuildCommands>
-        <li>VCEPU_ToxicWastePipe</li>
-        <li>VCEPU_UndergroundToxicWastePipe</li>
-        <li>VCEPU_ToxicWasteValve</li>
-        <li>VCEPU_ToxicWasteTank</li>
-        <li>VCEPU_ToxicWasteTap</li>
-        <li>VCEPU_ToxicWasteDrain</li>
+        <li>VCEUE_ToxicWastePipe</li>
+        <li>VCEUE_UndergroundToxicWastePipe</li>
+        <li>VCEUE_ToxicWasteValve</li>
+        <li>VCEUE_ToxicWasteTank</li>
+        <li>VCEUE_ToxicWasteTap</li>
+        <li>VCEUE_ToxicWasteDrain</li>
       </relatedBuildCommands>
       <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
       <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
@@ -416,23 +423,24 @@
     <canOverlapZones>false</canOverlapZones>
     <comps>
       <li Class="PipeSystem.CompProperties_ConvertResourceToThing">
-        <pipeNet>VCEPU_ToxicWasteNet</pipeNet>
+        <pipeNet>VCEUE_ToxicWasteNet</pipeNet>
         <thing>Wastepack</thing>
       </li>
     </comps>
     <researchPrerequisites>
-      <li>VCEPU_Biotech_DyeRefining</li>
+      <li>VCEUE_Biotech_DyeRefining</li>
     </researchPrerequisites>
     <designatorDropdown>PipeTaps</designatorDropdown>
   </ThingDef>
 
   <ThingDef ParentName="FurnitureBase">
-    <defName>VCEPU_ToxicWasteDrain</defName>
+    <defName>VCEUE_ToxicWasteDrain</defName>
     <label>toxic waste drain</label>
     <description>A hopper-like storage basin meant to input toxic waste into the network, filling up connected tanks.</description>
     <thingClass>Building_Storage</thingClass>
     <graphicData>
-      <texPath>Things/Building/Production/ToxicWasteDrain</texPath>
+      <texPath>Things/Building/Production/DrainGeneric</texPath>
+      <shaderType>CutoutComplex</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
@@ -442,6 +450,7 @@
       </damageData>
       <drawRotated>false</drawRotated>
       <allowFlip>false</allowFlip>
+      <color>(0.451,0.58,0.431)</color>
     </graphicData>
     <rotatable>false</rotatable>
     <altitudeLayer>BuildingOnTop</altitudeLayer>
@@ -454,7 +463,7 @@
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>8</Mass>
-      <WorkToBuild>60000</WorkToBuild>
+      <WorkToBuild>30</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>0.5</Beauty>
     </statBases>
@@ -464,12 +473,12 @@
     </costList>
     <building>
       <relatedBuildCommands>
-        <li>VCEPU_ToxicWastePipe</li>
-        <li>VCEPU_UndergroundToxicWastePipe</li>
-        <li>VCEPU_ToxicWasteValve</li>
-        <li>VCEPU_ToxicWasteTank</li>
-        <li>VCEPU_ToxicWasteTap</li>
-        <li>VCEPU_ToxicWasteDrain</li>
+        <li>VCEUE_ToxicWastePipe</li>
+        <li>VCEUE_UndergroundToxicWastePipe</li>
+        <li>VCEUE_ToxicWasteValve</li>
+        <li>VCEUE_ToxicWasteTank</li>
+        <li>VCEUE_ToxicWasteTap</li>
+        <li>VCEUE_ToxicWasteDrain</li>
       </relatedBuildCommands>
       <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
       <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
@@ -500,13 +509,105 @@
     <canOverlapZones>false</canOverlapZones>
     <comps>
       <li Class="PipeSystem.CompProperties_ConvertThingToResource">
-        <pipeNet>VCEPU_ToxicWasteNet</pipeNet>
+        <pipeNet>VCEUE_ToxicWasteNet</pipeNet>
         <thing>Wastepack</thing>
       </li>
     </comps>
     <researchPrerequisites>
-      <li>VCEPU_Biotech_DyeRefining</li>
+      <li>VCEUE_Biotech_DyeRefining</li>
     </researchPrerequisites>
     <designatorDropdown>PipeDrains</designatorDropdown>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>VCEUE_WasteDetofixier</defName>
+    <label>waste detofixier</label>
+    <description>Consumes power to destroy wastepacks.</description>
+    <thingClass>Building</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/Production/WasteDetoxifier/WasteDetox</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(9,9)</drawSize>
+      <drawOffset>(0,4,0.8)</drawOffset>
+      <shadowData>
+        <volume>(1.93,1,1.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconScale>0.8</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <pathCost>50</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>1500</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-50</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(7,7)</size>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <costList>
+      <Steel>250</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>3000</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>200</fuelConsumptionRate>
+        <fuelCapacity>100.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>Wastepack</li>
+          </thingDefs>
+        </fuelFilter>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(80,112,180,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>50</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>5</explosiveRadius>
+        <explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
+        <explosiveDamageType>ToxGas</explosiveDamageType>
+        <destroyThingOnExplosionSize>4</destroyThingOnExplosionSize>
+        <startWickHitPointsPercent>0.111</startWickHitPointsPercent>
+        <preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <wickTicks>150~225</wickTicks>
+      </li>
+      <li Class="CompProperties_Stunnable">
+        <useLargeEMPEffecter>true</useLargeEMPEffecter>
+        <affectedDamageDefs>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+    </comps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <uiOrder>2100</uiOrder>
+    <designationHotKey>Misc4</designationHotKey>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>VCEUE_Biotech_WasteCleansing</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
   </ThingDef>
 </Defs>
