@@ -4,19 +4,19 @@
 
 	<ItemProcessor.ItemAcceptedDef>
 		<defName>IP_AutoclaveFirstItem</defName>
-		<building>VCEPU_Autoclave</building>
+		<building>VCEUE_Autoclave</building>
 		<slot>1</slot>
 		<items>
-			<li>VCEPU_RawPlasteel</li>
+			<li>VCEUE_RawPlasteel</li>
 		</items>
 	</ItemProcessor.ItemAcceptedDef>
 
 	<ItemProcessor.ItemAcceptedDef>
 		<defName>IP_AutoweaveFirstItem</defName>
-		<building>VCEPU_Autoweave</building>
+		<building>VCEUE_Autoweave</building>
 		<slot>1</slot>
 		<items>
-			<li>VCEPU_RawThread</li>
+			<li>VCEUE_RawThread</li>
 		</items>
 	</ItemProcessor.ItemAcceptedDef>
 
