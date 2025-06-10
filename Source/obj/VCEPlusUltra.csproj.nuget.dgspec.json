@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaChemfuelExpandedPlusUltra\\1.4\\Vanilla\\Source\\VCEPlusUltra.csproj": {}
+    "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaChemfuelExpandedPlusUltra\\Source\\VCEPlusUltra.csproj": {}
   },
   "projects": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaChemfuelExpandedPlusUltra\\1.4\\Vanilla\\Source\\VCEPlusUltra.csproj": {
+    "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaChemfuelExpandedPlusUltra\\Source\\VCEPlusUltra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaChemfuelExpandedPlusUltra\\1.4\\Vanilla\\Source\\VCEPlusUltra.csproj",
+        "projectUniqueName": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaChemfuelExpandedPlusUltra\\Source\\VCEPlusUltra.csproj",
         "projectName": "VCEPlusUltra",
-        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaChemfuelExpandedPlusUltra\\1.4\\Vanilla\\Source\\VCEPlusUltra.csproj",
-        "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaChemfuelExpandedPlusUltra\\1.4\\Vanilla\\Source\\obj\\",
+        "projectPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaChemfuelExpandedPlusUltra\\Source\\VCEPlusUltra.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaChemfuelExpandedPlusUltra\\Source\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\Vova\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,7 +42,7 @@
             },
             "Krafs.Rimworld.Ref": {
               "target": "Package",
-              "version": "[1.4.*, )"
+              "version": "[1.5.4409, )"
             },
             "Lib.Harmony": {
               "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
