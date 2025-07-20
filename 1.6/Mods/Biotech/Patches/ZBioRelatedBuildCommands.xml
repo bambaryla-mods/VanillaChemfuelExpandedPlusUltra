@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="VCEUE_DyeRefinery"]/building/relatedBuildCommands</xpath>
+        <value>
+            <li>VCEUE_ToxicWastePipe</li>
+            <li>VCEUE_UndergroundToxicWastePipe</li>
+            <li>VCEUE_ToxicWasteValve</li>
+            <li>VCEUE_ToxicWasteTank</li>
+            <li>VCEUE_ToxicWasteTap</li>
+            <li>VCEUE_ToxicWasteDrain</li>
+        </value>
+    </Operation>
+</Patch>
