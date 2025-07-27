@@ -6,3 +6,4 @@ D:\Steam\steamapps\common\RimWorld\Mods\VanillaChemfuelExpandedPlusUltra\1.5\Van
 D:\Steam\steamapps\common\RimWorld\Mods\VanillaChemfuelExpandedPlusUltra\Source\obj\Debug\VCEPlusUltra.csproj.AssemblyReference.cache
 D:\Steam\steamapps\common\RimWorld\Mods\VanillaChemfuelExpandedPlusUltra\Source\obj\Debug\VCEPlusUltra.csproj.CoreCompileInputs.cache
 D:\Steam\steamapps\common\RimWorld\Mods\VanillaChemfuelExpandedPlusUltra\Source\obj\Debug\VCEPlusUltra.dll
+D:\Steam\steamapps\common\RimWorld\Mods\VanillaChemfuelExpandedPlusUltra\1.6\Vanilla\Assemblies\VCEPlusUltra.dll
