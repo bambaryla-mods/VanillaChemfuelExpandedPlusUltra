@@ -17,7 +17,7 @@ namespace VCEPlusUltra
 
     public class CompDamageWhenUnpowered : ThingComp
     {
-        public CompProperties_DamageWhenUnpowered Props => base.props as CompProperties_DamageWhenUnpowered;
+        public CompProperties_DamageWhenUnpowered Props => (CompProperties_DamageWhenUnpowered)props;
         public CompPowerTrader compPower;
         public CompResourceStorage compStorage;
         public override void PostSpawnSetup(bool respawningAfterLoad)
