@@ -138,6 +138,7 @@
   </ThingDef>
   <ThingDef ParentName="BuildingBase">
     <defName>VREA_NeutroPipe</defName>
+    <drawStyleCategory>Conduits</drawStyleCategory>
     <label>Neutroamine pipe</label>
     <description>Sterile pipes designed to transport usable Neutroamine from deepchem refineries to Neutroamine tanks for storage or to Neutroamine-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
@@ -183,7 +184,7 @@
       <WorkToBuild>35</WorkToBuild>
       <Flammability>1.0</Flammability>
     </statBases>
-        <costList>
+    <costList>
       <Silver>2</Silver>
     </costList>
     <comps>
@@ -219,6 +220,7 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>VREA_SubterraneanNeutroPipe</defName>
+    <drawStyleCategory>Conduits</drawStyleCategory>
     <label>subterranean Neutroamine pipe</label>
     <description>Subterranean sterile pipes designed to transport usable Neutroamine from deepchem refineries to Neutroamine tanks for storage or to Neutroamine-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
@@ -264,7 +266,7 @@
       <WorkToBuild>120</WorkToBuild>
       <Flammability>0</Flammability>
     </statBases>
-        <costList>
+    <costList>
       <Silver>4</Silver>
     </costList>
     <comps>
@@ -336,7 +338,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>-2</Beauty>
     </statBases>
-        <costList>
+    <costList>
       <Silver>15</Silver>
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>

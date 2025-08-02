@@ -35,6 +35,7 @@
     <thingClass>PipeSystem.Building_Pipe</thingClass>
     <category>Building</category>
     <tickerType>Rare</tickerType>
+    <drawStyleCategory>Conduits</drawStyleCategory>
     <graphicData>
       <texPath>Things/Building/Linked/BluePipe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -74,7 +75,7 @@
       <WorkToBuild>35</WorkToBuild>
       <Flammability>1.0</Flammability>
     </statBases>
-        <costList>
+    <costList>
       <Steel>2</Steel>
     </costList>
     <comps>
@@ -110,6 +111,7 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>VCEUE_UndergroundDyePipe</defName>
+    <drawStyleCategory>Conduits</drawStyleCategory>
     <label>subterranean Dye pipe</label>
     <description>Subterranean steel pipes designed to transport usable Dye to Dye tanks for storage or to Dye-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
@@ -155,7 +157,7 @@
       <WorkToBuild>120</WorkToBuild>
       <Flammability>0</Flammability>
     </statBases>
-        <costList>
+    <costList>
       <Steel>4</Steel>
     </costList>
     <comps>
@@ -226,7 +228,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>-2</Beauty>
     </statBases>
-        <costList>
+    <costList>
       <Steel>15</Steel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>

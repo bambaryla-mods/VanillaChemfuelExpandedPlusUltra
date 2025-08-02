@@ -135,6 +135,7 @@
   </ThingDef>
   <ThingDef ParentName="BuildingBase">
     <defName>VCEUE_FSXPipe</defName>
+    <drawStyleCategory>Conduits</drawStyleCategory>
     <label>FSX pipe</label>
     <description>Plasteel pipes designed to transport usable FSX to FSX tanks for storage or to FSX-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
@@ -179,7 +180,7 @@
       <WorkToBuild>35</WorkToBuild>
       <Flammability>1.0</Flammability>
     </statBases>
-        <costList>
+    <costList>
       <Plasteel>1</Plasteel>
     </costList>
     <comps>
@@ -215,6 +216,7 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>VCEUE_UndergroundFSXPipe</defName>
+    <drawStyleCategory>Conduits</drawStyleCategory>
     <label>subterranean FSX pipe</label>
     <description>Subterranean plasteel pipes designed to transport usable FSX to FSX tanks for storage or to FSX-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
@@ -259,7 +261,7 @@
       <WorkToBuild>120</WorkToBuild>
       <Flammability>0</Flammability>
     </statBases>
-        <costList>
+    <costList>
       <Plasteel>2</Plasteel>
     </costList>
     <comps>
@@ -330,7 +332,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>-2</Beauty>
     </statBases>
-        <costList>
+    <costList>
       <Plasteel>5</Plasteel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>

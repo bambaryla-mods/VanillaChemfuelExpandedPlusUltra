@@ -30,6 +30,7 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>VCEUE_ToxicWastePipe</defName>
+    <drawStyleCategory>Conduits</drawStyleCategory>
     <label>toxic waste pipe</label>
     <description>Steel pipes designed to transport usable toxic waste for storage or to toxic waste-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
@@ -109,6 +110,7 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>VCEUE_UndergroundToxicWastePipe</defName>
+    <drawStyleCategory>Conduits</drawStyleCategory>
     <label>subterranean toxic waste pipe</label>
     <description>Subterranean steel pipes designed to transport usable toxic waste to tanks for storage or to toxic waste-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
@@ -222,7 +224,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>-2</Beauty>
     </statBases>
-        <costList>
+    <costList>
       <Steel>15</Steel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>

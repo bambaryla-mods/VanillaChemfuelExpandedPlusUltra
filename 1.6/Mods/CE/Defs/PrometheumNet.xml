@@ -128,6 +128,7 @@
   </ThingDef>
   <ThingDef ParentName="BuildingBase">
     <defName>VCEUE_PrometheumPipe</defName>
+    <drawStyleCategory>Conduits</drawStyleCategory>
     <label>Prometheum pipe</label>
     <description>Plasteel pipes designed to transport usable Prometheum from deepchem refineries to Prometheum tanks for storage or to Prometheum-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
@@ -172,7 +173,7 @@
       <WorkToBuild>35</WorkToBuild>
       <Flammability>1.0</Flammability>
     </statBases>
-        <costList>
+    <costList>
       <Plasteel>1</Plasteel>
     </costList>
     <comps>
@@ -208,6 +209,7 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>VCEUE_UndergroundPrometheumPipe</defName>
+    <drawStyleCategory>Conduits</drawStyleCategory>
     <label>subterranean Prometheum pipe</label>
     <description>Subterranean plasteel pipes designed to transport usable Prometheum from deepchem refineries to Prometheum tanks for storage or to Prometheum-consuming structures for automatic refilling.</description>
     <thingClass>PipeSystem.Building_Pipe</thingClass>
@@ -252,7 +254,7 @@
       <WorkToBuild>120</WorkToBuild>
       <Flammability>0</Flammability>
     </statBases>
-        <costList>
+    <costList>
       <Plasteel>2</Plasteel>
     </costList>
     <comps>
@@ -323,7 +325,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>-2</Beauty>
     </statBases>
-        <costList>
+    <costList>
       <Plasteel>6</Plasteel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
