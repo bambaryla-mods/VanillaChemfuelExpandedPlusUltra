@@ -84,5 +84,6 @@
     <li>vanillaexpanded.vchemfuele</li>
     <li>ceteam.combatextended</li>
     <li>vanillaexpanded.helixiengas</li>
+    <li>scpchemfuel.appliances</li>
   </loadAfter>
 </ModMetaData>

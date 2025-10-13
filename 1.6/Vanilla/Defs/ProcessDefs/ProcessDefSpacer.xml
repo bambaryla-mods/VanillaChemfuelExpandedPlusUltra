@@ -79,6 +79,31 @@
             <li>VCEUE_NeutroamineRefiningTierII</li>
         </researchPrerequisites>
     </PipeSystem.ProcessDef>
+
+    <!-- Neutroamine Network -->
+    <PipeSystem.ProcessDef>
+        <defName>VCEUE_ChemfuelIntoNeutroamineTierII</defName>
+        <label>Make Neutroamine from Chemfuel</label>
+        <ingredients>
+            <li>
+                <pipeNet>VCHE_ChemfuelNet</pipeNet>
+                <thing>Chemfuel</thing>
+                <countNeeded>35</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>6000</ticks>
+        <results>
+            <li>
+                <pipeNet>VREA_NeutroamineNet</pipeNet>
+                <thing>Neutroamine</thing>
+                <count>3</count>
+            </li>
+        </results>
+        <destroyIngredientsDirectly>true</destroyIngredientsDirectly>
+        <researchPrerequisites>
+            <li>VCEUE_NeutroamineRefiningII</li>
+        </researchPrerequisites>
+    </PipeSystem.ProcessDef>
     
 
     <PipeSystem.ProcessDef>
