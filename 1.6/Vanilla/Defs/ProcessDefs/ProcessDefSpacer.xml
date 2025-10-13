@@ -101,7 +101,7 @@
         </results>
         <destroyIngredientsDirectly>true</destroyIngredientsDirectly>
         <researchPrerequisites>
-            <li>VCEUE_NeutroamineRefiningII</li>
+            <li>VCEUE_NeutroamineRefiningTierII</li>
         </researchPrerequisites>
     </PipeSystem.ProcessDef>
     
