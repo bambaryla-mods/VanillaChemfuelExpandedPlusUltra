@@ -61,7 +61,7 @@
             <li>BiofuelRefining</li>
         </prerequisites>
         <researchViewX>0.50</researchViewX>
-        <researchViewY>1.30</researchViewY>
+        <researchViewY>1.40</researchViewY>
         <tab>VCEUE_Refinery_Research</tab>
     </ResearchProjectDef>
 

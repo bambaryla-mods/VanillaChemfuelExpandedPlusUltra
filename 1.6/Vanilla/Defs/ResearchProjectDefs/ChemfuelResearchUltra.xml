@@ -70,4 +70,58 @@
         <researchViewY>1.30</researchViewY>
         <tab>VCEUE_Refinery_Research</tab>
     </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>VCEUE_RawPlasteelRefiningIV</defName>
+        <label>Plasteel Refining IV</label>
+        <description>Learn how to automate the process of turning Deepchem into Plasteel without the Raw Plasteel intermediary.</description>
+        <baseCost>10000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEUE_RawPlasteelRefiningIII</li>
+        </prerequisites>
+        <researchViewX>4.50</researchViewX>
+        <researchViewY>1.40</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>VCEUE_AutoDevilstrand</defName>
+        <label>Devilstrand Refining IV</label>
+        <description>Learn how to automate the process of turning Deepchem into Devilstrand-like substance without the Unrefined Fiber intermediary.</description>
+        <baseCost>10000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEUE_SynthreadRefiningIII</li>
+        </prerequisites>
+        <researchViewX>4.50</researchViewX>
+        <researchViewY>0.00</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
+    <ResearchProjectDef>
+        <defName>VCEUE_AutoSynthread</defName>
+        <label>Synthread Refining IV</label>
+        <description>Learn how to automate the process of turning Chemfuel into Synthread-like substance without the Unrefined Fiber intermediary.</description>
+        <baseCost>10000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEUE_SynthreadRefiningIII</li>
+        </prerequisites>
+        <researchViewX>4.50</researchViewX>
+        <researchViewY>0.70</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
+    <ResearchProjectDef>
+        <defName>VCEUE_AutoHyperweave</defName>
+        <label>Hyperweave Refining IV</label>
+        <description>Learn how to automate the process of mixing Chemfuel and Neutroamine into Hyperweave-like substance without the Unrefined Fiber intermediary.</description>
+        <baseCost>10000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEUE_SynthreadRefiningIII</li>
+        </prerequisites>
+        <researchViewX>5.50</researchViewX>
+        <researchViewY>0.40</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
 </Defs>

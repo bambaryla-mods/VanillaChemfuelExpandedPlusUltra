@@ -66,8 +66,8 @@
         <prerequisites>
             <li>VCEUE_RawPlasteelRefining</li>
         </prerequisites>
-        <researchViewX>2</researchViewX>
-        <researchViewY>1.30</researchViewY>
+        <researchViewX>2.00</researchViewX>
+        <researchViewY>1.40</researchViewY>
         <tab>VCEUE_Refinery_Research</tab>
     </ResearchProjectDef>
 </Defs>
