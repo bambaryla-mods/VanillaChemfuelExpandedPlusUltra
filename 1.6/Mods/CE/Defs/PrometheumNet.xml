@@ -163,6 +163,7 @@
         <li>VCEUE_PrometheumRefinery</li>
         <li>VCEUE_PrometheumDrain</li>
       </relatedBuildCommands>
+      <canConstructInCorner>true</canConstructInCorner>
     </building>
     <drawerType>MapMeshOnly</drawerType>
     <altitudeLayer>Conduits</altitudeLayer>
@@ -244,6 +245,7 @@
       <blueprintGraphicData>
         <texPath>Things/Building/Linked/PipeAtlas</texPath>
       </blueprintGraphicData>
+      <canConstructInCorner>true</canConstructInCorner>
     </building>
     <drawerType>MapMeshOnly</drawerType>
     <altitudeLayer>Conduits</altitudeLayer>

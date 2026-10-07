@@ -65,6 +65,7 @@
         <li>VCEUE_DyeRefinery</li>
         <li>VCEUE_DyeDrain</li>
       </relatedBuildCommands>
+      <canConstructInCorner>true</canConstructInCorner>
     </building>
     <drawerType>MapMeshOnly</drawerType>
     <altitudeLayer>Conduits</altitudeLayer>
@@ -147,6 +148,7 @@
         <li>VCEUE_DyeRefinery</li>
         <li>VCEUE_DyeDrain</li>
       </relatedBuildCommands>
+      <canConstructInCorner>true</canConstructInCorner>
     </building>
     <drawerType>MapMeshOnly</drawerType>
     <altitudeLayer>Conduits</altitudeLayer>

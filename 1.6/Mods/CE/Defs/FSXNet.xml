@@ -170,6 +170,7 @@
       <blueprintGraphicData>
         <texPath>Things/Building/Linked/PipeAtlas</texPath>
       </blueprintGraphicData>
+      <canConstructInCorner>true</canConstructInCorner>
     </building>
     <drawerType>MapMeshOnly</drawerType>
     <altitudeLayer>Conduits</altitudeLayer>
@@ -251,6 +252,7 @@
       <blueprintGraphicData>
         <texPath>Things/Building/Linked/PipeAtlas</texPath>
       </blueprintGraphicData>
+      <canConstructInCorner>true</canConstructInCorner>
     </building>
     <drawerType>MapMeshOnly</drawerType>
     <altitudeLayer>Conduits</altitudeLayer>

@@ -180,6 +180,7 @@
         <li>VCEUE_NeutroamineRefinery</li>
         <li>VCEUE_NeutroamineDrain</li>
       </relatedBuildCommands>
+      <canConstructInCorner>true</canConstructInCorner>
     </building>
     <drawerType>MapMeshOnly</drawerType>
     <altitudeLayer>Conduits</altitudeLayer>
@@ -262,6 +263,7 @@
         <li>VCEUE_NeutroamineRefinery</li>
         <li>VCEUE_NeutroamineDrain</li>
       </relatedBuildCommands>
+      <canConstructInCorner>true</canConstructInCorner>
     </building>
     <drawerType>MapMeshOnly</drawerType>
     <altitudeLayer>Conduits</altitudeLayer>
