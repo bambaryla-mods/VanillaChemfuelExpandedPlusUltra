@@ -12,6 +12,8 @@
   <VCEUE_ExtractFSXDesc>Extract 150 FSX from the tank. A pawn will come to extract it.</VCEUE_ExtractFSXDesc>
 
   <VCEUE_CantRefineFSX>Can't refine FSX: FSX Tanks are full</VCEUE_CantRefineFSX>
+  <VCEUE_CantRefinePlasteel>Can't cure raw plasteel</VCEUE_CantRefinePlasteel>
+  <VCEUE_CantRefineThread>Can't cure thread</VCEUE_CantRefineThread>
 
   <VCEUE_FSXValve>Switches FSX flow on/off.</VCEUE_FSXValve>
   <VCEUE_FSXValveDesc>Switches FSX flow on/off. A pawn will come open/close the valve.</VCEUE_FSXValveDesc>
@@ -23,7 +25,7 @@
 
   <VCEUE_PrometheumValve>Switches Prometheum flow on/off.</VCEUE_PrometheumValve>
   <VCEUE_PrometheumValveDesc>Switches Prometheum flow on/off. A pawn will come open/close the valve.</VCEUE_PrometheumValveDesc>
-  
+
   <VCEUE_ExtractDye>Extract 150 Dye</VCEUE_ExtractDye>
   <VCEUE_ExtractDyeDesc>Extract 150 Dye from the tank. A pawn will come to extract it.</VCEUE_ExtractDyeDesc>
 

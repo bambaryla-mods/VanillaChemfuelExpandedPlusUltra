@@ -33,6 +33,22 @@ bld/
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
+[Dd]ebug/
+[Ss]ource/[Dd]ebugPublic/
+[Ss]ource/[Rr]elease/
+[Ss]ource/[Rr]eleases/
+[Ss]ource/x64/
+[Ss]ource/x86/
+[Ss]ource/[Ww][Ii][Nn]32/
+[Ss]ource/[Aa][Rr][Mm]/
+[Ss]ource/[Aa][Rr][Mm]64/
+[Ss]ource/[Aa][Rr][Mm]64[Ee][Cc]/
+[Ss]ource/bld/
+[Ss]ource/[Bb]in/
+[Ss]ource/[Oo]bj/
+[Ss]ource/[Oo]ut/
+[Ss]ource/[Ll]og/
+[Ss]ource/[Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -404,3 +420,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+Source/obj/*

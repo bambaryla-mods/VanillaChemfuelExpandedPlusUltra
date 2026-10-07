@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ResearchProjectDef>
+        <defName>VCEUE_ChemfuelRefiningTierIII</defName>
+        <label>Chemfuel Refining Tier 3</label>
+        <description>Research how to refine deepchem into chemfuel the fastest way possible.</description>
+        <baseCost>6000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEUE_ChemfuelRefiningTierII</li>
+        </prerequisites>
+        <researchViewX>3.50</researchViewX>
+        <researchViewY>2.60</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>VCEUE_NeutroamineRefiningTierIII</defName>
+        <label>Neutroamine Refining Tier 3</label>
+        <description>Research how to refine deepchem into neutroamine the fastest way possible.</description>
+        <baseCost>6000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEUE_NeutroamineRefiningTierII</li>
+        </prerequisites>
+        <researchViewX>3.50</researchViewX>
+        <researchViewY>4.60</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>VCEUE_DyeRefiningTierIII</defName>
+        <label>Dye Refining Tier 3</label>
+        <description>Research how to refine chemfuel into dye the fastest way possible.</description>
+        <baseCost>6000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEUE_DyeRefiningTierII</li>
+        </prerequisites>
+        <researchViewX>3.50</researchViewX>
+        <researchViewY>4.00</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>VCEUE_SynthreadRefiningIII</defName>
+        <label>Advanced Textile Refining III</label>
+        <description>Research how to refine deepchem into unrefined fibers, intermediate material from which threads can be woven.</description>
+        <baseCost>5000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>VCEUE_SynthreadRefiningII</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <researchViewX>3.5</researchViewX>
+        <researchViewY>0.40</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>VCEUE_RawPlasteelRefiningIII</defName>
+        <label>Raw Plasteel Refining III</label>
+        <description>Research how to refine raw plasteel from deepchem into usable plasteel. Raw plasteel is useless on its own and can only be cured into plasteel. The process involves using a refinery to extract the impurities, followed by curing the refined plasteel at a smelter.</description>
+        <baseCost>5000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEUE_RawPlasteelRefiningII</li>
+        </prerequisites>
+        <researchViewX>3.5</researchViewX>
+        <researchViewY>1.30</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>VCEUE_RawPlasteelRefiningIV</defName>
+        <label>Plasteel Refining IV</label>
+        <description>Learn how to automate the process of turning Deepchem into Plasteel without the Raw Plasteel intermediary.</description>
+        <baseCost>10000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEUE_RawPlasteelRefiningIII</li>
+        </prerequisites>
+        <researchViewX>4.50</researchViewX>
+        <researchViewY>1.40</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>VCEUE_AutoDevilstrand</defName>
+        <label>Devilstrand Refining IV</label>
+        <description>Learn how to automate the process of turning Deepchem into Devilstrand-like substance without the Unrefined Fiber intermediary.</description>
+        <baseCost>10000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEUE_SynthreadRefiningIII</li>
+        </prerequisites>
+        <researchViewX>4.50</researchViewX>
+        <researchViewY>0.00</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
+    <ResearchProjectDef>
+        <defName>VCEUE_AutoSynthread</defName>
+        <label>Synthread Refining IV</label>
+        <description>Learn how to automate the process of turning Chemfuel into Synthread-like substance without the Unrefined Fiber intermediary.</description>
+        <baseCost>10000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEUE_SynthreadRefiningIII</li>
+        </prerequisites>
+        <researchViewX>4.50</researchViewX>
+        <researchViewY>0.70</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
+    <ResearchProjectDef>
+        <defName>VCEUE_AutoHyperweave</defName>
+        <label>Hyperweave Refining IV</label>
+        <description>Learn how to automate the process of mixing Chemfuel and Neutroamine into Hyperweave-like substance without the Unrefined Fiber intermediary.</description>
+        <baseCost>10000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>VCEUE_SynthreadRefiningIII</li>
+        </prerequisites>
+        <researchViewX>5.50</researchViewX>
+        <researchViewY>0.40</researchViewY>
+        <tab>VCEUE_Refinery_Research</tab>
+    </ResearchProjectDef>
+</Defs>

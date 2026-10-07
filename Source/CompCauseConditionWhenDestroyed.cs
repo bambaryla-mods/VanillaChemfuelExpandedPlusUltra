@@ -17,7 +17,7 @@ namespace VCEPlusUltra
 
     public class CompCauseConditionWhenDestroyed : ThingComp
     {
-        public CompProperties_CauseConditionWhenDestroyed Props => base.props as CompProperties_CauseConditionWhenDestroyed;
+        public CompProperties_CauseConditionWhenDestroyed Props => (CompProperties_CauseConditionWhenDestroyed)props;
         public CompResourceStorage compStorage;
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {

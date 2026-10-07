@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Toxic Wastepack Generator Plus</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="EW_UndergroundWastePipe" or defName="EW_WastePipe" or defName="EW_WasteValve" or defName="EW_WasteTank" or defName="EW_WasteTap" or defName="EW_WasteBin"]</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Toxic Wastepack Generator Plus</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/PipeSystem.PipeNetDef[defName="EW_WastepackNet"]</xpath>
+    </match>
+  </Operation>
+
+  <!-- <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PipeSystem.ProcessDef[starts-with(defName, "VCEUE_") and not(contains(defName, "Tier") or contains(defName, "Dye"))]</xpath>
+    <value>
+      <wastePackToProduce>1</wastePackToProduce>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PipeSystem.ProcessDef[starts-with(defName, "VCEUE_") and contains(defName, "TierII") and not(contains(defName, "TierIII") or contains(defName, "Dye"))]</xpath>
+    <value>
+      <wastePackToProduce>2</wastePackToProduce>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PipeSystem.ProcessDef[starts-with(defName, "VCEUE_") and contains(defName, "TierIII") and not(contains(defName, "Dye"))]</xpath>
+    <value>
+      <wastePackToProduce>5</wastePackToProduce>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="VCEUE_FSXRefinery" or defName="VCEUE_PrometheumRefinery" or defName="VCEUE_NeutroamineRefinery"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]</xpath>
+    <value>
+      <stopWhenWastepackFull>True</stopWhenWastepackFull>
+    </value>
+  </Operation> -->
+
+  <Operation Class="PatchOperationInsert">
+    <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_WasteProducer" or @Class="CompProperties_PollutionPump"]</xpath>
+    <value>
+      <li Class="PipeSystem.CompProperties_Resource">
+        <pipeNet>VCEUE_ToxicWasteNet</pipeNet>
+      </li>
+    </value>
+  </Operation>
+
+</Patch>

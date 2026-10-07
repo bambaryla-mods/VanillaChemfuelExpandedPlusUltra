@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <PipeSystem.ProcessDef>
+        <defName>VCEUE_RawPlasteelIV</defName>
+        <label>Make Plasteel directly from Deepchem</label>
+        <ingredients>
+            <li>
+                <pipeNet>VCHE_DeepchemNet</pipeNet>
+                <thing>VCHE_Deepchem</thing>
+                <countNeeded>500</countNeeded>
+            </li>
+        </ingredients>
+        <results>
+            <li>
+                <thing>Plasteel</thing>
+                <count>250</count>
+            </li>
+        </results>
+        <ticks>75000</ticks>
+        <destroyIngredientsDirectly>true</destroyIngredientsDirectly>
+        <researchPrerequisites>
+            <li>VCEUE_RawPlasteelRefiningIV</li>
+        </researchPrerequisites>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>VCEUE_RawDevilstrandIV</defName>
+        <label>Mold Devilstrand directly from Deepchem</label>
+        <ingredients>
+            <li>
+                <pipeNet>VCHE_DeepchemNet</pipeNet>
+                <thing>VCHE_Deepchem</thing>
+                <countNeeded>500</countNeeded>
+            </li>
+        </ingredients>
+        <results>
+            <li>
+                <thing>DevilstrandCloth</thing>
+                <count>250</count>
+            </li>
+        </results>
+        <ticks>60000</ticks>
+        <destroyIngredientsDirectly>true</destroyIngredientsDirectly>
+        <researchPrerequisites>
+            <li>VCEUE_AutoDevilstrand</li>
+        </researchPrerequisites>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>VCEUE_RawSynthreadIV</defName>
+        <label>Make Synthread directly from Chemfuel</label>
+        <ingredients>
+            <li>
+                <pipeNet>VCHE_ChemfuelNet</pipeNet>
+                <thing>Chemfuel</thing>
+                <countNeeded>350</countNeeded>
+            </li>
+        </ingredients>
+        <results>
+            <li>
+                <thing>Synthread</thing>
+                <count>150</count>
+            </li>
+        </results>
+        <ticks>60000</ticks>
+        <destroyIngredientsDirectly>true</destroyIngredientsDirectly>
+        <researchPrerequisites>
+            <li>VCEUE_AutoSynthread</li>
+        </researchPrerequisites>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>VCEUE_RawHyperweaveIV</defName>
+        <label>Make most Hyperweave from Raw Thread quickest</label>
+        <ingredients>
+            <li>
+                <pipeNet>VCHE_ChemfuelNet</pipeNet>
+                <thing>Chemfuel</thing>
+                <countNeeded>100</countNeeded>
+            </li>
+            <li>
+                <pipeNet>VREA_NeutroamineNet</pipeNet>
+                <thing>Neutroamine</thing>
+                <countNeeded>100</countNeeded>
+            </li>
+        </ingredients>
+        <results>
+            <li>
+                <thing>Hyperweave</thing>
+                <count>175</count>
+            </li>
+        </results>
+        <ticks>60000</ticks>
+        <destroyIngredientsDirectly>true</destroyIngredientsDirectly>
+        <researchPrerequisites>
+            <li>VCEUE_AutoHyperweave</li>
+        </researchPrerequisites>
+    </PipeSystem.ProcessDef>
+</Defs>

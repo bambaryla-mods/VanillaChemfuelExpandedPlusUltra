@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WorldObjectDef ParentName="OutpostBase" MayRequireAnyOf="vanillaexpanded.outposts,vanillaexpanded.vchemfuele">
+        <defName>Outpost_Pumping</defName>
+        <label>pumping outpost</label>
+        <description>Places a temporary, autonomously-led camp that specializes in locating and tapping underground deepchem reservoirs. Once an ample amount is collected, a delivery will be made at the outskirts of a faction's primary colony.</description>
+        <worldObjectClass>VOE.Outpost_Drilling</worldObjectClass>
+        <expandingIconTexture>WorldObjects/OutpostDrilling</expandingIconTexture>
+        <modExtensions>
+            <li Class="Outposts.OutpostExtension">
+                <AllowedBiomes>
+                    <li>Desert</li>
+                    <li>ExtremeDesert</li>
+                </AllowedBiomes>
+                <RequiredSkills>
+                    <Construction>30</Construction>
+                </RequiredSkills>
+                <ProvidedFood>MealFine_Veg</ProvidedFood>
+                <ResultOptions>
+                    <li>
+                        <Thing>VCHE_Deepchem</Thing>
+                        <AmountsPerSkills>
+                            <Mining>125</Mining>
+                        </AmountsPerSkills>
+                    </li>
+                </ResultOptions>
+            </li>
+        </modExtensions>
+    </WorldObjectDef>
+
+    <WorldObjectDef ParentName="OutpostBase" MayRequireAnyOf="vanillaexpanded.outposts,bambaryla.vcepu">
+        <defName>VCEPU_Outpost_Neutroamine</defName>
+        <label>neutroamine factory outpost</label>
+        <description>Places a temporary, autonomously-led camp that specializes in using factory buildings for creation of neutroamine. The workers will set up a Deepchem drills and various refineries to allow production of Neutroamine.</description>
+        <worldObjectClass>VOE.Outpost_Drilling</worldObjectClass>
+        <expandingIconTexture>WorldObjects/OutpostFactory</expandingIconTexture>
+        <modExtensions>
+            <li Class="Outposts.OutpostExtension">
+                <MinPawns>6</MinPawns>
+                <DisplaySkills>
+                    <li>Construction</li>
+                    <li>Medicine</li>
+                </DisplaySkills>
+                <AllowedBiomes>
+                    <li>Desert</li>
+                    <li>ExtremeDesert</li>
+                </AllowedBiomes>
+                <RequiredSkills>
+                    <Construction>40</Construction>
+                    <Medicine>30</Medicine>
+                </RequiredSkills>
+                <ProvidedFood>MealFine_Veg</ProvidedFood>
+                <ResultOptions>
+                    <li>
+                        <Thing>Neutroamine</Thing>
+                        <AmountsPerSkills>
+                            <Medicine>10</Medicine>
+                            <Construction>2</Construction>
+                        </AmountsPerSkills>
+                    </li>
+                </ResultOptions>
+            </li>
+        </modExtensions>
+    </WorldObjectDef>
+
+    <WorldObjectDef ParentName="OutpostBase" MayRequireAnyOf="vanillaexpanded.outposts,bambaryla.vcepu">
+        <defName>VCEPU_Outpost_Plasteel</defName>
+        <label>plasteel factory outpost</label>
+        <description>Places a temporary, autonomously-led camp that specializes in using factory buildings for creation of Plasteel. The workers will set up a Deepchem drills and various refineries to allow production of Neutroamine.</description>
+        <worldObjectClass>VOE.Outpost_Drilling</worldObjectClass>
+        <expandingIconTexture>WorldObjects/OutpostFactory</expandingIconTexture>
+        <modExtensions>
+            <li Class="Outposts.OutpostExtension">
+                <MinPawns>6</MinPawns>
+                <DisplaySkills>
+                    <li>Construction</li>
+                    <li>Crafting</li>
+                </DisplaySkills>
+                <AllowedBiomes>
+                    <li>Desert</li>
+                    <li>ExtremeDesert</li>
+                </AllowedBiomes>
+                <RequiredSkills>
+                    <Crafting>30</Crafting>
+                    <Construction>40</Construction>
+                </RequiredSkills>
+                <ProvidedFood>MealFine_Veg</ProvidedFood>
+                <ResultOptions>
+                    <li>
+                        <Thing>Plasteel</Thing>
+                        <AmountsPerSkills>
+                            <Crafting>10</Crafting>
+                            <Construction>2</Construction>
+                        </AmountsPerSkills>
+                    </li>
+                </ResultOptions>
+            </li>
+        </modExtensions>
+    </WorldObjectDef>
+
+    <WorldObjectDef ParentName="OutpostBase" MayRequireAnyOf="vanillaexpanded.outposts,bambaryla.vcepu,ceteam.combatextended">
+        <defName>VCEPU_Outpost_Prometheum</defName>
+        <label>prometheum factory outpost</label>
+        <description>Places a temporary, autonomously-led camp that specializes in using factory buildings for creation of Prometheum. The workers will set up a Deepchem drills and various refineries to allow production of Neutroamine.</description>
+        <worldObjectClass>VOE.Outpost_Drilling</worldObjectClass>
+        <expandingIconTexture>WorldObjects/OutpostFactory</expandingIconTexture>
+        <modExtensions>
+            <li Class="Outposts.OutpostExtension">
+                <MinPawns>6</MinPawns>
+                <DisplaySkills>
+                    <li>Construction</li>
+                    <li>Intellectual</li>
+                </DisplaySkills>
+                <AllowedBiomes>
+                    <li>Desert</li>
+                    <li>ExtremeDesert</li>
+                </AllowedBiomes>
+                <RequiredSkills>
+                    <Intellectual>30</Intellectual>
+                    <Construction>40</Construction>
+                </RequiredSkills>
+                <ProvidedFood>MealFine_Veg</ProvidedFood>
+                <ResultOptions>
+                    <li MayRequire="ceteam.combatextended">
+                        <Thing>Prometheum</Thing>
+                        <AmountsPerSkills>
+                            <Intellectual>10</Intellectual>
+                            <Construction>2</Construction>
+                        </AmountsPerSkills>
+                    </li>
+                </ResultOptions>
+            </li>
+        </modExtensions>
+    </WorldObjectDef>
+
+    <WorldObjectDef ParentName="OutpostBase" MayRequireAnyOf="vanillaexpanded.outposts,bambaryla.vcepu,ceteam.combatextended">
+        <defName>VCEPU_Outpost_FSX</defName>
+        <label>fsx factory outpost</label>
+        <description>Places a temporary, autonomously-led camp that specializes in using factory buildings for creation of FSX. The workers will set up a Deepchem drills and various refineries to allow production of Neutroamine.</description>
+        <worldObjectClass>VOE.Outpost_Drilling</worldObjectClass>
+        <expandingIconTexture>WorldObjects/OutpostFactory</expandingIconTexture>
+        <modExtensions>
+            <li Class="Outposts.OutpostExtension">
+                <MinPawns>6</MinPawns>
+                <DisplaySkills>
+                    <li>Construction</li>
+                    <li>Intellectual</li>
+                </DisplaySkills>
+                <AllowedBiomes>
+                    <li>Desert</li>
+                    <li>ExtremeDesert</li>
+                </AllowedBiomes>
+                <RequiredSkills>
+                    <Intellectual>30</Intellectual>
+                    <Construction>40</Construction>
+                </RequiredSkills>
+                <ProvidedFood>MealFine_Veg</ProvidedFood>
+                <ResultOptions>
+                    <li MayRequire="ceteam.combatextended">
+                        <Thing>FSX</Thing>
+                        <AmountsPerSkills>
+                            <Intellectual>10</Intellectual>
+                            <Construction>2</Construction>
+                        </AmountsPerSkills>
+                    </li>
+                </ResultOptions>
+            </li>
+        </modExtensions>
+    </WorldObjectDef>
+</Defs>
