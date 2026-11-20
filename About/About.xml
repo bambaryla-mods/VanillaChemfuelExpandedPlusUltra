@@ -9,16 +9,20 @@
 
     Currently the mod contains:
 
-    Changes to original VCE refineries, to adhere to the new subsystem created by Kikohi.
+    Changes to original VCE refineries, to adhere to the new subsystem created by Kikohi. The deepchem refinery now has three tiers of chemfuel refining.
 
-    Neutroamine refinery, producing neutroamine from deepchem; full neutroamine network with taps, drains, pipes, valves and tanks.
+    Neutroamine refinery, producing neutroamine from deepchem or chemfuel; full neutroamine network with taps, drains, pipes, valves and tanks.
 
-    Raw Plasteel refinery, producing Raw Plasteel (new resource) from deepchem. Raw Plasteel can be refined automatically in an autoclave into usable Plasteel, or manually smelted in a smelter.
-    Automatic Weavery, producing Unrefined Fibers (new resource) from deepchem. Unrefined fibers can be weaved into hyperweave, synthread or devilstrand automatically in an autoweave, or manually on a tailor's bench.
+    Raw Plasteel refinery, producing Raw Plasteel (new resource) from deepchem. Colonists can load Raw Plasteel into an autoclave, which cures it into usable Plasteel on its own, or smelt it manually at an electric smelter.
+    Automatic Weavery, producing Unrefined Fibers (new resource) from deepchem. Colonists can load Unrefined Fibers into an autoweave, which weaves them into hyperweave, synthread or devilstrand on its own, or weave them manually at a tailoring bench.
+    At the highest tier, the Auto Plasteel Refinery and the Advanced Automatic Thread Molder make plasteel and fabrics straight from deepchem or chemfuel, skipping the raw step.
+
+    Pipe limits: every refinery fed by pipes has a "Pipe limits" tab. You can pause it while an input network holds less than a set amount (to keep a reserve), or once an output network holds a set amount (to stop when the tanks are full enough). A cycle that already started always finishes. The autoclave and autoweave are loaded by hand, so they don't have this tab.
 
     If you have Biotech enabled, the mod adds a toxic waste network, allowing you to store and transfer the wastepacks securely across your colony.
-    It comes with pipelines, drains, pipes, taps, valves and special tanks. These tanks have to be kept powered at all times, otherwise they'll take damage from the corrosive waste inside. On destruction, they will explode and spread pollution and toxic gas in your colony.
+    It comes with pipelines, drains, pipes, taps, valves and special tanks. These tanks have to be kept powered at all times, otherwise they'll take damage from the corrosive waste inside (the damage stops short of destroying them). On destruction, a tank with waste inside will explode in flames and cause toxic fallout. The fuller the tank, the longer the fallout lasts.
     It comes with additional feature that allows the pollution pumps, mech rechargers and gestators to be connected to the pipeline so your colonists do not need to carry the wastepacks themselves.
+    A waste detoxifier burns wastepacks using a lot of power.
     Toxic waste can be used in a dye refinery to produce dye, allowing you to color your colony to your hearts' desire.
     The dye comes with its own network of pipes, drains, taps, valves and containers as well, allowing you to produce the dye and use it anywhere you like.
     Since dye is easily producible now, its value is decreased for balance reasons.
@@ -27,23 +31,25 @@
 
     Uses the same name as Vanilla Races Expanded - Androids for the pipe network, so should be fully compatible with it and derivative works.
 
-    If you have Combat Extended enabled, the mod adds an FSX refinery, producing FSX from chemfuel and neutroamine and a Prometheum refinery, producing Prometheum from deepchem and neutroamine.
+    If you have Combat Extended enabled, the mod adds an FSX refinery, producing FSX from chemfuel and neutroamine and a Prometheum refinery, producing Prometheum from chemfuel and neutroamine.
     Both of the refineries come with a complete set of pipelines, drains, pipes, taps, and tanks. FSX and Prometheum tanks are _highly_ volatile!
 
     If you have both Helixien Gas Expanded and Combat Extended, then FSX will be produced using Helixien Gas or chemfuel. Helixien gas network will also be placed in the aforementioned designator dropdowns.
+    If you have Helixien Gas Expanded, the plasteel recipes will also be available at the gas-powered smelter.
 
     If you have Neutroamine Cooler, the Vanilla Expanded Framework understands that it should be able to use the Neutroamine network.
 
     If you have Vegetable Garden Project, the unrefined fibers have the recipes available on the looms.
 
-    If you have Vanilla Furniture Expanded - Production, the unrefined fibers have the recipes available on the big tailoring bench, and the plasteel recipe will be available at the fueled smelter.
+    If you have Vanilla Furniture Expanded - Production, the unrefined fibers have the recipes available on the large tailoring table, and the plasteel recipes will be available at the fueled smelter.
 
     If you have Advanced Pollution Pump, it will also feed the waste network.
 
-    There are 3 tiers of refining recipes, so that you can scale with more buildings or by adding more research.
+    There are 3 tiers of refining recipes, so that you can scale with more buildings or by adding more research. Plasteel and the fabrics have a 4th tier.
 
     Known issue: some icons are missing and i have no idea how to figure them out.
     Known issue: not sure if it is an issue actually, but the waste gathering is kinda unintuitive at times :)
+    Known issue: a pollution pump connected to a full waste network loses the waste it pumps, so keep some free space in your waste tanks.
 
     Shout out to Dubwise for Rimefeller mod which was a huge inspiration for this one!
     Thanks to ThatBartGuy for great art and to Sovereign for introducing me to ThatBartGuy.
@@ -52,8 +58,8 @@
     Thanks to Thadge for recompiling to 1.5!
   </description>
   <supportedVersions>
-    <li>1.5</li>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <packageId>bambaryla.VCEPU</packageId>
   <modDependencies>

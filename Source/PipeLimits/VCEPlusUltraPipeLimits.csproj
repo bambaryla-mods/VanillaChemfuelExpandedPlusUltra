@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>VCEPlusUltraPipeLimits</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PipeSystem">
+      <HintPath>$(PipeSystemDll)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" />
+  </ItemGroup>
+</Project>
