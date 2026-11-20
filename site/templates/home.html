@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block description %}{{ meta.get("summary") or "A RimWorld mod that adds refineries, pipe networks and automation to Vanilla Chemfuel Expanded." }}{% endblock %}
+{% block body %}
+<section class="hero">
+  <div class="hero-art" style="background-image:url(assets/preview.png)"></div>
+  <div class="hero-inner">
+    <h1 class="visually-hidden">{{ mod_name }}</h1>
+    <img class="hero-logo" src="assets/preview.png" alt="{{ mod_name }}">
+    <p class="tagline">{{ meta.get("tagline", "") }}</p>
+    <p class="cta">
+      <a class="btn primary" href="{{ workshop }}">Steam Workshop</a>
+      <a class="btn" href="{{ github }}">GitHub</a>
+    </p>
+  </div>
+</section>
+<main id="main" class="home">
+  <div class="home-intro">{{ content }}</div>
+  <h2 class="cards-head">What's in the mod</h2>
+  <div class="cards">
+    {% for c in cards %}
+    <a class="card" href="{{ c.slug }}.html">
+      {% if c.icon %}
+      <div class="thumb thumb-icons"><img src="assets/{{ c.icon }}" alt="" loading="lazy"></div>
+      {% else %}
+      <div class="thumb thumb-none"></div>
+      {% endif %}
+      <span class="card-group">{{ c.group }}</span>
+      <h3>{{ c.title }}</h3>
+      <p>{{ c.summary }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,142 @@
+{# Tables and cards the Markdown pages pull in through the helpers in build.py. #}
+
+{% macro icon(src, alt="") %}
+{% if src %}<img src="assets/{{ src }}" alt="{{ alt }}" loading="lazy">{% else %}<span class="noicon" title="Texture from Vanilla Chemfuel Expanded or the base game"></span>{% endif %}
+{% endmacro %}
+
+{% macro amounts(items) %}
+{% for name, n in items %}<span class="amt"><b>{{ n|num }}</b> {{ name }}</span>{% if not loop.last %}<br>{% endif %}{% endfor %}
+{% endmacro %}
+
+{% macro badges(module, requires) %}
+{% if module %}<span class="badge">needs {{ module }}</span>{% endif %}
+{% if requires and requires != module %}<span class="badge">needs {{ requires }}</span>{% endif %}
+{% endmacro %}
+
+{% macro costs(items) %}
+{% for name, n in items %}{{ n|num }} {{ name }}{% if not loop.last %}, {% endif %}{% endfor %}
+{% endmacro %}
+
+{% macro refineries(cards) %}
+{% for c in cards %}
+<section class="building" id="{{ c.id|slug }}">
+  <div class="building-head">
+    {{ icon(c.icon) }}
+    <div>
+      <h3>{{ c.label }}</h3>
+      {{ badges(c.module, c.requires) }}
+      {% if c.foreign %}<span class="badge">from Vanilla Chemfuel Expanded, changed by this mod</span>{% endif %}
+    </div>
+  </div>
+  {% if c.desc %}<p class="bdesc">{{ c.desc }}</p>{% endif %}
+  {% if not c.limits %}<p class="note">No pipe input: colonists bring the items to it, so it has no <a href="pipe-limits.html">Pipe limits</a> tab.</p>{% endif %}
+  {% if c.costs or c.power or c.size or c.research %}
+  <dl class="facts">
+    {% if c.costs %}<div><dt>Cost</dt><dd>{{ costs(c.costs) }}</dd></div>{% endif %}
+    {% if c.power %}<div><dt>Power</dt><dd>{{ c.power|num }} W</dd></div>{% endif %}
+    {% if c.size %}<div><dt>Size</dt><dd>{{ c.size }}</dd></div>{% endif %}
+    {% if c.research %}<div><dt>Research</dt><dd>{{ c.research|join(", ") }}</dd></div>{% endif %}
+  </dl>
+  {% endif %}
+  <div class="table-scroll">
+    <table class="stats">
+      <thead><tr>
+        <th>Process</th><th>Takes</th><th>Makes</th>
+        <th title="In-game time for one cycle. 1 day = 24 h.">Cycle</th>
+        <th title="Output if the refinery runs all day without running out of input.">Per day</th>
+        <th>Research</th>
+      </tr></thead>
+      <tbody>
+      {% for r in c.rows %}
+        <tr>
+          <th class="name">{{ r.label }}{% if r.requires %}<br>{{ badges("", r.requires) }}{% endif %}</th>
+          <td>{{ amounts(r.inputs) }}</td>
+          <td>{{ amounts(r.outputs) }}</td>
+          <td>{{ r.ticks|ticks }}</td>
+          <td>{{ amounts(r.per_day) }}</td>
+          <td class="wrap">{{ r.research|join(", ") or "—" }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endfor %}
+{% endmacro %}
+
+{% macro networks(nets) %}
+{% for n in nets %}
+<h3 class="net-head" id="{{ n.id|slug }}">{% if n.color %}<span class="swatch" style="background:{{ n.color }}"></span>{% endif %}{{ n.name }} network {{ badges(n.module, "") }}</h3>
+<div class="table-scroll">
+  <table class="stats">
+    <thead><tr><th>Building</th><th>Kind</th><th>Holds</th><th>Cost</th><th>Research</th></tr></thead>
+    <tbody>
+    {% for m in n.members %}
+      <tr>
+        <th class="name"><span class="name-wrap">{{ icon(m.icon) }}<span class="label">{{ m.label }}</span></span></th>
+        <td>{{ m.role }}</td>
+        <td>{% if m.capacity %}{{ m.capacity|num }} {{ n.unit }}{% else %}—{% endif %}</td>
+        <td class="wrap">{{ costs(m.costs) or "—" }}{% if m.power %}<span class="note">{{ m.power|num }} W</span>{% endif %}</td>
+        <td class="wrap">{{ m.research|join(", ") or "—" }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endfor %}
+{% endmacro %}
+
+{% macro research_table(rows) %}
+<div class="table-scroll">
+  <table class="stats research">
+    <thead><tr><th>Project</th><th>Tech level</th><th>Cost</th><th>Needs</th><th>Unlocks</th></tr></thead>
+    <tbody>
+    {% for r in rows %}
+      <tr id="{{ r.id|slug }}">
+        <th class="name"><span class="label">{{ r.label }}</span>{{ badges(r.module, r.requires) }}<span class="rdesc">{{ r.desc }}</span></th>
+        <td>{{ r.tech }}</td>
+        <td>{{ r.cost|num }}</td>
+        <td class="wrap">{{ r.prereqs|join(", ") }}{% if r.bench %}<span class="note">at a {{ r.bench|lower }}</span>{% endif %}</td>
+        <td class="wrap">{{ r.unlocks|join(", ") or "—" }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endmacro %}
+
+{% macro recipes(rows) %}
+<div class="table-scroll">
+  <table class="stats">
+    <thead><tr><th>Recipe</th><th>Takes</th><th>Makes</th><th>Work</th><th>Made at</th></tr></thead>
+    <tbody>
+    {% for r in rows %}
+      <tr>
+        <th class="name">{{ r.label }}</th>
+        <td>{{ amounts(r.inputs) }}</td>
+        <td>{{ amounts(r.outputs) }}</td>
+        <td>{{ r.work|num }}</td>
+        <td class="wrap">{{ r.users|join(", ") }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endmacro %}
+
+{% macro things(cards) %}
+<ul class="gallery">
+  {% for c in cards %}
+  <li class="gcard">{{ icon(c.icon) }}<div><h4>{{ c.label }}</h4><p>{{ c.desc }}</p></div></li>
+  {% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro requirements(deps, versions) %}
+<ul class="deps">
+  {% for d in deps %}
+  <li><b>{{ d.name }}</b>{% if d.steam %} · <a href="{{ d.steam }}">Steam Workshop</a>{% endif %}{% if d.download %} · <a href="{{ d.download }}">download</a>{% endif %}</li>
+  {% endfor %}
+</ul>
+<p>Works with RimWorld {{ versions|join(" and ") }}.</p>
+{% endmacro %}

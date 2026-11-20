@@ -400,12 +400,8 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-# VS Code files for those working on multiple tools
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# VS Code (all of it, including settings)
+.vscode/
 *.code-workspace
 
 # Local History for Visual Studio Code
@@ -421,3 +417,27 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 Source/obj/*
+
+# AI tooling (assistant settings, memory, plans, instructions)
+.claude/
+.codex/
+.cursor/
+.cursorrules
+.aider*
+.windsurf/
+.windsurfrules
+.opencode/
+.copilot/
+.github/copilot-instructions.md
+.gemini/
+.continue/
+.superpowers/
+docs/superpowers/
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+GEMINI.md
+
+# Player site build output (site/build.py)
+site/_build/
+__pycache__/
