@@ -1,6 +1,6 @@
 # Player site
 
-The site at https://databobek.github.io/VanillaChemfuelExpandedPlusUltra/ shows players what the mod adds and what it needs. It isn't part of the mod, and `_PublisherPlus.xml` keeps this folder out of the Workshop upload.
+The site at https://bambaryla-mods.github.io/VanillaChemfuelExpandedPlusUltra/ shows players what the mod adds and what it needs. It isn't part of the mod, and `_PublisherPlus.xml` keeps this folder out of the Workshop upload.
 
 ## How it works
 

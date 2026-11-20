@@ -29,8 +29,8 @@ SITE = Path(__file__).resolve().parent
 ROOT = SITE.parent
 BUILD_MARKER = ".vcepu-site-build"  # written into the output so a rebuild only ever deletes its own folder
 
-GITHUB = "https://github.com/databobek/VanillaChemfuelExpandedPlusUltra"
-SITE_URL = "https://databobek.github.io/VanillaChemfuelExpandedPlusUltra/"  # for link previews
+GITHUB = "https://github.com/bambaryla-mods/VanillaChemfuelExpandedPlusUltra"
+SITE_URL = "https://bambaryla-mods.github.io/VanillaChemfuelExpandedPlusUltra/"  # for link previews
 SCREENSHOT_EXTS = (".png", ".jpg", ".jpeg", ".webp")
 
 TICKS_PER_HOUR = 2500
