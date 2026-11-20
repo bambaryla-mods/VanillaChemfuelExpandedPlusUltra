@@ -20,64 +20,25 @@
     </value>
   </Operation>
 
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Biotech</li>
-    </mods>
-    <nomatch Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName="PS_DeepchemRefinery"]/comps/li[@Class="PipeSystem.CompProperties_ResourceProcessor"]</xpath>
-      <value>
-        <li Class="PipeSystem.CompProperties_Resource">
-          <pipeNet>VCHE_DeepchemNet</pipeNet>
-        </li>
-        <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
-          <showBufferInfo>false</showBufferInfo>
-          <notWorkingKey>VCHE_CantRefine</notWorkingKey>
-          <progressBarOffset>(0, 0, -0.65)</progressBarOffset>
-          <showResultItem>true</showResultItem>
-          <processes>
-            <li>VCEUE_DeepchemIntoChemfuel</li>
-            <li>VCEUE_DeepchemIntoChemfuelTierII</li>
-            <li>VCEUE_DeepchemIntoChemfuelTierIII</li>
-          </processes>
-          <!-- <soundAmbient>VCHE_RefineryAmbient</soundAmbient> -->
-        </li>
-      </value>
-    </nomatch>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName="PS_DeepchemRefinery"]/comps/li[@Class="PipeSystem.CompProperties_ResourceProcessor"]</xpath>
-      <value>
-        <li Class="CompProperties_ThingContainer">
-          <compClass>CompThingContainer</compClass>
-          <stackLimit>100</stackLimit>
-          <drawContainedThing>false</drawContainedThing>
-          <dropEffecterDef>MechChargerWasteRemoved</dropEffecterDef>
-        </li>
-        <li Class="CompProperties_WasteProducer">
-          <showContentsInInspectPane>true</showContentsInInspectPane>
-        </li>
-        <li Class="PipeSystem.CompProperties_Resource">
-          <pipeNet>VCHE_DeepchemNet</pipeNet>
-        </li>
-        <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
-          <showBufferInfo>false</showBufferInfo>
-          <notWorkingKey>VCHE_CantRefine</notWorkingKey>
-          <progressBarOffset>(0, 0, -0.65)</progressBarOffset>
-          <showResultItem>true</showResultItem>
-          <processes>
-            <li>VCEUE_DeepchemIntoChemfuel</li>
-            <li>VCEUE_DeepchemIntoChemfuelTierII</li>
-            <li>VCEUE_DeepchemIntoChemfuelTierIII</li>
-          </processes>
-          <!-- <soundAmbient>VCHE_RefineryAmbient</soundAmbient> -->
-          <stopWhenWastepackFull>True</stopWhenWastepackFull>
-        </li>
-        <li Class="PipeSystem.CompProperties_Resource">
-          <pipeNet>VCEUE_ToxicWasteNet</pipeNet>
-        </li>
-      </value>
-    </match>
-
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="PS_DeepchemRefinery"]/comps/li[@Class="PipeSystem.CompProperties_ResourceProcessor"]</xpath>
+    <value>
+      <li Class="PipeSystem.CompProperties_Resource">
+        <pipeNet>VCHE_DeepchemNet</pipeNet>
+      </li>
+      <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
+        <showBufferInfo>false</showBufferInfo>
+        <notWorkingKey>VCHE_CantRefine</notWorkingKey>
+        <progressBarOffset>(0, 0, -0.65)</progressBarOffset>
+        <showResultItem>true</showResultItem>
+        <processes>
+          <li>VCEUE_DeepchemIntoChemfuel</li>
+          <li>VCEUE_DeepchemIntoChemfuelTierII</li>
+          <li>VCEUE_DeepchemIntoChemfuelTierIII</li>
+        </processes>
+        <!-- <soundAmbient>VCHE_RefineryAmbient</soundAmbient> -->
+      </li>
+    </value>
   </Operation>
 
   <Operation Class="PatchOperationFindMod">

@@ -1,0 +1,32 @@
+<Project>
+  <!-- Shared by all the VCEPlusUltra* assemblies. Each one is built to the 1.7 Vanilla assemblies folder. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>VCEPlusUltra</RootNamespace>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Deterministic>true</Deterministic>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <GameDir>$(MSBuildThisFileDirectory)..\..\..\</GameDir>
+    <OutputPath>$(MSBuildThisFileDirectory)..\1.7\Vanilla\Assemblies\</OutputPath>
+    <PipeSystemDll>$(MSBuildThisFileDirectory)..\..\..\..\..\workshop\content\294100\2023507013\1.7\Assemblies\PipeSystem.dll</PipeSystemDll>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Publicizer" Version="2.*" PrivateAssets="all" />
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(GameDir)Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>$(GameDir)UnityStubs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Publicize Include="Assembly-CSharp" />
+  </ItemGroup>
+</Project>

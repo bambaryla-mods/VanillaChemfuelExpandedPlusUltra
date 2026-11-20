@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--
+    Adds the "Pipe limits" tab to every refinery of this mod (and the base deepchem refinery) that is connected to pipes:
+    advanced processors with at least one pipe connection, and the simple resource processors (raw plasteel, thread).
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[(starts-with(defName, "VCEUE_") or defName="PS_DeepchemRefinery") and (comps/li[@Class="PipeSystem.CompProperties_ResourceProcessor"] or (comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"] and comps/li[@Class="PipeSystem.CompProperties_Resource"]))]/comps</xpath>
+    <value>
+      <li Class="VCEPlusUltra.CompProperties_PipeLimits" />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[comps/li[@Class="VCEPlusUltra.CompProperties_PipeLimits"] and inspectorTabs]/inspectorTabs</xpath>
+    <value>
+      <li>VCEPlusUltra.ITab_PipeLimits</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[comps/li[@Class="VCEPlusUltra.CompProperties_PipeLimits"] and not(inspectorTabs)]</xpath>
+    <value>
+      <inspectorTabs>
+        <li>VCEPlusUltra.ITab_PipeLimits</li>
+      </inspectorTabs>
+    </value>
+  </Operation>
+</Patch>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <VCEUE_PipeLimits_Tab>Pipe limits</VCEUE_PipeLimits_Tab>
+  <VCEUE_PipeLimits_Desc>Production only starts a new cycle while every enabled limit is satisfied. A cycle that already started always finishes.\n\nDrag the markers on the bars, or type the amounts in.</VCEUE_PipeLimits_Desc>
+  <VCEUE_PipeLimits_Allowed>Production allowed</VCEUE_PipeLimits_Allowed>
+  <VCEUE_PipeLimits_PausedBelow>Paused: {0} is below {1}</VCEUE_PipeLimits_PausedBelow>
+  <VCEUE_PipeLimits_PausedAbove>Paused: {0} reached {1}</VCEUE_PipeLimits_PausedAbove>
+  <VCEUE_PipeLimits_Invalid>The "at or above" limit is lower than the "below" limit. Fix it, or production stays paused.</VCEUE_PipeLimits_Invalid>
+  <VCEUE_PipeLimits_PausedInvalid>Paused: {0} limits are contradictory</VCEUE_PipeLimits_PausedInvalid>
+  <VCEUE_PipeLimits_StopBelow>Stop when below</VCEUE_PipeLimits_StopBelow>
+  <VCEUE_PipeLimits_StopAbove>Stop when at or above</VCEUE_PipeLimits_StopAbove>
+  <VCEUE_PipeLimits_Input>input</VCEUE_PipeLimits_Input>
+  <VCEUE_PipeLimits_Output>output</VCEUE_PipeLimits_Output>
+  <VCEUE_PipeLimits_Other>connected</VCEUE_PipeLimits_Other>
+</LanguageData>
